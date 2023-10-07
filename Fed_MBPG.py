@@ -1,4 +1,4 @@
-Mimport torch
+import torch
 import garage
 from garage.experiment import run_experiment
 from garage.experiment import LocalRunner
