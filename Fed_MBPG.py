@@ -13,7 +13,7 @@ from garage.envs import normalize
 import copy
 
 import argparse
-parser = argparse.ArgumentParser(description='IS-MBPG')
+parser = argparse.ArgumentParser(description='FedSVRPG-M for DRL in mujoco')
 parser.add_argument('--env', default='CartPole', type=str, help='choose environment from [CartPole, Walker, Hopper, HalfCheetah]')
 parser.add_argument('--IS_MBPG_star', default=False, type=bool, help='whether to use IS-MBPG*')
 
@@ -131,6 +131,7 @@ def run_task(snapshot_config, *_):
     num_policies = 5
     num_iterations = 50
     coef = 1.983
+    K = 100
 
     # 初始化一个初始策略，并保存其参数
     if args.env == 'CartPole':
@@ -177,7 +178,7 @@ def run_task(snapshot_config, *_):
                    star_version=star_version
                    )
             runner.setup(algo, env)
-            runner.train(n_epochs=100, batch_size=batch_size)
+            runner.train(n_epochs=K, batch_size=batch_size)
 
             # 计算差值，并累加到总差值中
             for key in init_policy_params:
