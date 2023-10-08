@@ -129,8 +129,8 @@ def run_task(snapshot_config, *_):
         path = './init/HalfCheetah_policy.pth'
 
     num_policies = 5
-    num_iterations = 50
-    K = 100
+    num_global_iterations = 50
+    num_local_iterations = 100
 
     # 初始化一个初始策略，并保存其参数
     if args.env == 'CartPole':
@@ -147,8 +147,8 @@ def run_task(snapshot_config, *_):
     # 初始化5个策略，它们一开始都是与初始策略相同
     policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
 
-    # 循环num_iterations次
-    for iteration in range(num_iterations):
+    # 循环num_global_iterations次
+    for iteration in range(num_global_iterations):
         all_params = []
 
         # 对每个策略进行训练
@@ -175,7 +175,7 @@ def run_task(snapshot_config, *_):
                    star_version=star_version
                    )
             runner.setup(algo, env)
-            runner.train(n_epochs=K, batch_size=batch_size)
+            runner.train(n_epochs=num_local_iterations, batch_size=batch_size)
 
             # 保存这个策略的参数
             all_params.append(policy.state_dict())
