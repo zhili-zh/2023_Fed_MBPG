@@ -40,7 +40,6 @@ def run_task(snapshot_config, *_):
         batch_size = 5000
         max_length = 100
         n_timestep = 5e5
-        n_counts = 5
         name = 'CartPole'
         #grad_factor = 5
         grad_factor = 100
@@ -72,7 +71,6 @@ def run_task(snapshot_config, *_):
         th = 1.2
 
         n_timestep = 1e7
-        n_counts = 5
         lr = 0.75
         w = 2
         c = 5
@@ -96,7 +94,6 @@ def run_task(snapshot_config, *_):
         max_length = 1000
         th = 1.5
         n_timestep = 1e7
-        n_counts = 5
         lr = 0.75
         w = 1
         c = 3
@@ -115,7 +112,6 @@ def run_task(snapshot_config, *_):
         max_length = 500
 
         n_timestep = 1e7
-        n_counts = 5
         lr = 0.6
         w = 3
         c =7
@@ -129,9 +125,11 @@ def run_task(snapshot_config, *_):
         path = './init/HalfCheetah_policy.pth'
 
     num_policies = 5
-    num_iterations = 50
-    coef = 1.983
-    K = 100
+    num_global_iterations = 50
+    num_local_iterations = 100
+    global_lr = 0.6
+    local_lr = lr
+    coef = global_lr / (local_lr * num_policies * num_local_iterations)
 
     # 初始化一个初始策略，并保存其参数
     if args.env == 'CartPole':
@@ -150,8 +148,8 @@ def run_task(snapshot_config, *_):
     # 初始化5个策略，它们一开始都是与初始策略相同
     policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
 
-    # 循环num_iterations次
-    for iteration in range(num_iterations):
+    # 循环num_global_iterations次
+    for iteration in range(num_global_iterations):
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
         # 对每个策略进行训练
@@ -178,7 +176,7 @@ def run_task(snapshot_config, *_):
                    star_version=star_version
                    )
             runner.setup(algo, env)
-            runner.train(n_epochs=K, batch_size=batch_size)
+            runner.train(n_epochs=num_local_iterations, batch_size=batch_size)
 
             # 计算差值，并累加到总差值中
             for key in init_policy_params:
