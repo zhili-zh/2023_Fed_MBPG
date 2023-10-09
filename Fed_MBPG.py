@@ -143,13 +143,12 @@ def run_task(snapshot_config, *_):
                                         hidden_nonlinearity=torch.tanh,
                                         output_nonlinearity=None)
 
-    init_policy_params = init_policy.state_dict()
-
-    # 初始化5个策略，它们一开始都是与初始策略相同
-    policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
-
     # 循环num_global_iterations次
     for iteration in range(num_global_iterations):
+
+        # 初始化5个策略，它们一开始都是与初始策略相同
+        policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
+        init_policy_params = init_policy.state_dict()
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
         # 对每个策略进行训练
@@ -186,7 +185,7 @@ def run_task(snapshot_config, *_):
         # 使用初始策略的参数和总差值更新每个策略
         for policy in policies:
             updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
-            policy.load_state_dict(updated_params)
+        init_policy.load_state_dict(updated_params)
 
     # 这时，任意一个策略对象中都保存着最终的策略参数
     final_policy = policies[0]
