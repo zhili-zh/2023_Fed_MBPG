@@ -51,6 +51,7 @@ class MBPG_IM(BatchPolopt):
             policy_lr=1e-2,
             w = 10,
             c = 100,
+            beta = 0.5,
 
             #hyperparameters for HAP
             n_timestep=1e6,
@@ -113,7 +114,8 @@ class MBPG_IM(BatchPolopt):
         self._old_policy = copy.deepcopy(self.policy)
         #self._optimizer = STORM(self._policy.parameters())
         self.g_max = g_max
-        self.a = torch.Tensor([0])
+        # self.a = torch.Tensor([0])
+        self.a = torch.Tensor([beta])
 
         self.decay_learning_rate = decay_learning_rate
 
@@ -224,8 +226,8 @@ class MBPG_IM(BatchPolopt):
         self._policy.set_param_values(params)
 
 
-        self.a = torch.min(torch.Tensor([1.0]), torch.Tensor([self.c * (eta_t ** 2)]))
-        self.a = torch.max(self.a, torch.Tensor([0.3]))
+        # self.a = torch.min(torch.Tensor([1.0]), torch.Tensor([self.c * (eta_t ** 2)]))
+        # self.a = torch.max(self.a, torch.Tensor([0.3]))
         #print(self.a.item())
         # print(G_p.item())
         # print(self.c * (eta_t ** 2))
