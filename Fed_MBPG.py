@@ -16,6 +16,11 @@ import argparse
 parser = argparse.ArgumentParser(description='FedSVRPG-M for DRL in mujoco')
 parser.add_argument('--env', default='CartPole', type=str, help='choose environment from [CartPole, Walker, Hopper, HalfCheetah]')
 parser.add_argument('--IS_MBPG_star', default=False, type=bool, help='whether to use IS-MBPG*')
+parser.add_argument('--beta', default=0.5, type=float, help='the value of Beta')
+parser.add_argument('--num-agent', default=5, type=int, help='the numbers of agents/devices')
+parser.add_argument('--global-iteration', default=50, type=int, help='the numbers of global interations')
+parser.add_argument('--local-iteration', default=10, type=int, help='the numbers of local interations')
+
 
 args = parser.parse_args()
 
@@ -124,12 +129,13 @@ def run_task(snapshot_config, *_):
         name = 'HalfCheetah'
         path = './init/HalfCheetah_policy.pth'
 
-    num_policies = 5
-    num_global_iterations = 50
-    num_local_iterations = 100
+    num_policies = args.num_agent
+    num_global_iterations = args.global_iteration
+    num_local_iterations = args.local_iteration
     global_lr = 0.6
     local_lr = lr
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
+    beta = args.beta
 
     # 初始化一个初始策略，并保存其参数
     if args.env == 'CartPole':
@@ -172,7 +178,8 @@ def run_task(snapshot_config, *_):
                    center_adv=True,
                    g_max = g_max,
                    #decay_learning_rate=d_lr,
-                   star_version=star_version
+                   star_version=star_version,
+                   beta=beta
                    )
             runner.setup(algo, env)
             runner.train(n_epochs=num_local_iterations, batch_size=batch_size)
