@@ -20,6 +20,7 @@ parser.add_argument('--beta', default=0.5, type=float, help='the value of Beta')
 parser.add_argument('--num-agent', default=5, type=int, help='the numbers of agents/devices')
 parser.add_argument('--global-iteration', default=50, type=int, help='the numbers of global interations')
 parser.add_argument('--local-iteration', default=10, type=int, help='the numbers of local interations')
+parser.add_argument('--simple-avg', default='No', type=str)
 
 
 args = parser.parse_args()
@@ -166,6 +167,7 @@ def run_task(snapshot_config, *_):
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
         init_policy_params = init_policy.state_dict()
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
+        total_avg_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
         # 对每个策略进行训练
         index = 0
@@ -202,12 +204,22 @@ def run_task(snapshot_config, *_):
             for key in init_policy_params:
                 diff = policy.state_dict()[key] - init_policy_params[key]
                 total_diff_params[key] += diff
+
+            # 计算平均参数
+            for key in init_policy_params:
+                total_avg_params[key] += policy.state_dict()[key] / num_policies
+
             index = index + 1
 
         # 使用初始策略的参数和总差值更新每个策略
-        print("使用初始策略的参数和总差值更新每个策略")
-        updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
-        init_policy.load_state_dict(updated_params)
+        if args.simple_avg == 'No':
+            print("使用初始策略的参数和总差值更新每个策略")
+            updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
+            init_policy.load_state_dict(updated_params)
+
+        if args.simple_avg == 'Yes':
+            init_policy.load_state_dict(total_avg_params)
+
 
     # 这时，任意一个策略对象中都保存着最终的策略参数
     final_policy = policies[0]
