@@ -160,6 +160,7 @@ def run_task(snapshot_config, *_):
 
     # 循环num_global_iterations次
     for iteration in range(num_global_iterations):
+        print("begin to train policies of iteration ", iteration)
 
         # 初始化5个策略，它们一开始都是与初始策略相同
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
@@ -167,7 +168,8 @@ def run_task(snapshot_config, *_):
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
         # 对每个策略进行训练
-        for policy in policies:
+        for index, policy in policies:
+            print("begin to train pplicy ", index)
             baseline = LinearFeatureBaseline(env_spec=env.spec)
             algo = MBPG_IM(env_spec=env.spec,
                    env = env,
