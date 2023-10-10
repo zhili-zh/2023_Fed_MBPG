@@ -172,7 +172,7 @@ def run_task(snapshot_config, *_):
                     w = w,
                     th=th,
                     g_max=g_max,
-                    n_timestep=n_timestep,
+                    n_timestep=batch_size*num_local_iterations,
 
                     batch_size=batch_size,
                     center_adv=True,
