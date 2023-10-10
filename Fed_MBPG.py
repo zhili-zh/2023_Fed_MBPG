@@ -175,8 +175,11 @@ def run_task(snapshot_config, *_):
         for policy in policies:
             print("begin to train policy ", index)
             policy_params = policy.state_dict()
+            # 遍历state_dict并打印每层的权重
             for layer_name, param in policy_params.items():
-                print(f"Layer: {layer_name}, Shape: {param.shape}")
+                print(f"Layer: {layer_name}")
+                print(param)
+                print("-----------------------------")
 
             baseline = LinearFeatureBaseline(env_spec=env.spec)
             algo = MBPG_IM(env_spec=env.spec,
@@ -229,8 +232,11 @@ def run_task(snapshot_config, *_):
             print("不使用联邦学习")
             init_policy = copy.deepcopy(policy)
             policy_params = policy.state_dict()
+            # 遍历state_dict并打印每层的权重
             for layer_name, param in policy_params.items():
-                print(f"Layer: {layer_name}, Shape: {param.shape}")
+                print(f"Layer: {layer_name}")
+                print(param)
+                print("-----------------------------")
 
 
 
