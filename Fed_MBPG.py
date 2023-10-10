@@ -218,8 +218,10 @@ def run_task(snapshot_config, *_):
             updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
             init_policy.load_state_dict(updated_params)
         elif args.simple_avg == 'Yes':
+            print("使用初始策略的参数和策略的参数平均值更新每个策略")
             init_policy.load_state_dict(total_avg_params)
         else:
+            print("不使用联邦学习")
             init_policy = copy.deepcopy(policy)
 
 
