@@ -215,8 +215,8 @@ def run_task(snapshot_config, *_):
 
             # 计算平均参数
             # print("计算平均值")
-            # for key in init_policy_params:
-            #     total_avg_params[key] += new_policy.state_dict()[key] / num_policies
+            for key in init_policy_params:
+                total_avg_params[key] += new_policy.state_dict()[key] / num_policies
 
             index = index + 1
 
