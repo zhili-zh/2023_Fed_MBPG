@@ -141,7 +141,7 @@ def run_task(snapshot_config, *_):
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
-    print("global_lr:", 0.6)
+    print("simple_avg:", args.simple_avg)
     print("local_lr:", lr)
     print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
     print("beta:", args.beta)
@@ -161,7 +161,7 @@ def run_task(snapshot_config, *_):
 
     # 循环num_global_iterations次
     for iteration in range(num_global_iterations):
-        print("begin to train policies of iteration ", iteration)
+        # print("begin to train policies of iteration ", iteration)
 
         # 初始化5个策略，它们一开始都与初始策略相同
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
@@ -173,13 +173,13 @@ def run_task(snapshot_config, *_):
         # 对每个策略进行训练
         index = 0
         for policy in policies:
-            print("begin to train policy ", index)
+            # print("begin to train policy ", index)
             policy_params = policy.state_dict()
             # 遍历state_dict并打印每层的权重
-            for layer_name, param in policy_params.items():
-                print(f"Layer: {layer_name}")
-                print(param)
-                print("-----------------------------")
+            # for layer_name, param in policy_params.items():
+            #     print(f"Layer: {layer_name}")
+            #     print(param)
+            #     print("-----------------------------")
 
             baseline = LinearFeatureBaseline(env_spec=env.spec)
             algo = MBPG_IM(env_spec=env.spec,
@@ -205,43 +205,41 @@ def run_task(snapshot_config, *_):
                    )
             runner.setup(algo, env)
             _, new_policy = runner.train(n_epochs=100, batch_size=batch_size)
-            print("finish trainning policy ", index)
+            # print("finish trainning policy ", index)
 
             # 计算差值，并累加到总差值中
-            print("计算差值，并累加到总差值中")
+            # print("计算差值，并累加到总差值中")
             for key in init_policy_params:
                 diff = new_policy.state_dict()[key] - init_policy_params[key]
                 total_diff_params[key] += diff
 
             # 计算平均参数
-            print("计算平均值")
-            for key in init_policy_params:
-                total_avg_params[key] += new_policy.state_dict()[key] / num_policies
+            # print("计算平均值")
+            # for key in init_policy_params:
+            #     total_avg_params[key] += new_policy.state_dict()[key] / num_policies
 
             index = index + 1
 
         # 使用初始策略的参数和总差值更新每个策略
         if args.simple_avg == 'No':
-            print("使用初始策略的参数和总差值更新每个策略")
+            # print("使用初始策略的参数和总差值更新每个策略")
             updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
             init_policy.load_state_dict(updated_params)
         elif args.simple_avg == 'Yes':
-            print("使用初始策略的参数和策略的参数平均值更新每个策略")
+            # print("使用初始策略的参数和策略的参数平均值更新每个策略")
             init_policy.load_state_dict(total_avg_params)
         else:
-            print("不使用联邦学习")
+            # print("不使用联邦学习")
             init_policy = copy.deepcopy(new_policy)
-            policy_params = new_policy.state_dict()
-            # 遍历state_dict并打印每层的权重
-            for layer_name, param in policy_params.items():
-                print(f"Layer: {layer_name}")
-                print(param)
-                print("-----------------------------")
+            # policy_params = new_policy.state_dict()
+            # # 遍历state_dict并打印每层的权重
+            # for layer_name, param in policy_params.items():
+            #     print(f"Layer: {layer_name}")
+            #     print(param)
+            #     print("-----------------------------")
 
 
-
-    # 这时，任意一个策略对象中都保存着最终的策略参数
-    final_policy = policies[0]
+    final_policy = init_policy
 
 
 run_experiment(
