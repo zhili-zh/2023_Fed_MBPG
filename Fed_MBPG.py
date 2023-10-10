@@ -204,7 +204,9 @@ def run_task(snapshot_config, *_):
                    beta=beta
                    )
             runner.setup(algo, env)
-            runner.train(n_epochs=100, batch_size=batch_size)
+            output1, output2 = runner.train(n_epochs=100, batch_size=batch_size)
+            print("output1", output1)
+            print("output1", output2)
             print("finish trainning policy ", index)
 
             # 计算差值，并累加到总差值中
