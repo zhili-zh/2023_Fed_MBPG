@@ -195,14 +195,17 @@ def run_task(snapshot_config, *_):
                    )
             runner.setup(algo, env)
             runner.train(n_epochs=num_local_iterations, batch_size=batch_size)
+            print("finish trainning policy ", index)
 
             # 计算差值，并累加到总差值中
+            print("计算差值，并累加到总差值中")
             for key in init_policy_params:
                 diff = policy.state_dict()[key] - init_policy_params[key]
                 total_diff_params[key] += diff
             index = index + 1
 
         # 使用初始策略的参数和总差值更新每个策略
+        print("使用初始策略的参数和总差值更新每个策略")
         for policy in policies:
             updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
         init_policy.load_state_dict(updated_params)
