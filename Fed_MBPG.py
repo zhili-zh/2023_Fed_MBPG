@@ -146,7 +146,7 @@ def run_task(snapshot_config, *_):
     print("beta:", args.beta)
 
 
-    # 初始化一个初始策略，并保存其参数
+    # 初始化一个初始策略
     if args.env == 'CartPole':
         init_policy = CategoricalMLPPolicy(env.spec,
                                         hidden_sizes=[8, 8],
@@ -162,7 +162,7 @@ def run_task(snapshot_config, *_):
     for iteration in range(num_global_iterations):
         print("begin to train policies of iteration ", iteration)
 
-        # 初始化5个策略，它们一开始都是与初始策略相同
+        # 初始化5个策略，它们一开始都与初始策略相同
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
         init_policy_params = init_policy.state_dict()
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
@@ -206,8 +206,7 @@ def run_task(snapshot_config, *_):
 
         # 使用初始策略的参数和总差值更新每个策略
         print("使用初始策略的参数和总差值更新每个策略")
-        for policy in policies:
-            updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
+        updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
         init_policy.load_state_dict(updated_params)
 
     # 这时，任意一个策略对象中都保存着最终的策略参数
