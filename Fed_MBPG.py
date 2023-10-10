@@ -137,6 +137,15 @@ def run_task(snapshot_config, *_):
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
 
+    print("num_policies:", args.num_agent)
+    print("num_global_iterations:", args.global_iteration)
+    print("num_local_iterations:", args.local_iteration)
+    print("global_lr:", 0.6)
+    print("local_lr:", lr)
+    print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
+    print("beta:", args.beta)
+
+
     # 初始化一个初始策略，并保存其参数
     if args.env == 'CartPole':
         init_policy = CategoricalMLPPolicy(env.spec,
