@@ -26,14 +26,6 @@ run_special_tasks() {
     sleep 3600
 }
 
-# Run tasks
-run_tasks CartPole
-run_tasks Walker
-run_tasks Hopper
-run_tasks HalfCheetah
-
-echo "All fed tasks scheduled."
-
 # Run special tasks
 run_special_tasks CartPole
 run_special_tasks Walker
@@ -41,3 +33,11 @@ run_special_tasks Hopper
 run_special_tasks HalfCheetah
 
 echo "All avg tasks scheduled."
+
+# Run tasks
+run_tasks CartPole
+run_tasks Walker
+run_tasks Hopper
+run_tasks HalfCheetah
+
+echo "All fed tasks scheduled."
