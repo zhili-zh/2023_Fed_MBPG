@@ -242,8 +242,16 @@ def run_task(snapshot_config, *_):
 
     final_policy = init_policy
 
+from send_email import *
+Emails = ServerEmail(mail_host="smtp.gmail.com", 
+                                    mail_sender="cocohe.conn@gmail.com", 
+                                    mail_license="", 
+                                    mail_receivers="cocohe.conn@gmail.com", 
+                                    server_name='miao-exxact')
+Emails.send_begin_email(exp_name = args, arglist = args)
 run_experiment(
     run_task,
     snapshot_mode='last',
     seed=1,
 )
+Emails.send_end_email(exp_name = args, arglist = args)
