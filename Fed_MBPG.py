@@ -143,7 +143,7 @@ def run_task(snapshot_config, *_):
     print("num_local_iterations:", args.local_iteration)
     print("simple_avg:", args.simple_avg)
     print("local_lr:", lr)
-    print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
+    # print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
     print("beta:", args.beta)
 
 
@@ -241,7 +241,7 @@ def run_task(snapshot_config, *_):
 
     final_policy = init_policy
 
-
+print("cuda.is_available", torch.cuda.is_available())
 run_experiment(
     run_task,
     snapshot_mode='last',
