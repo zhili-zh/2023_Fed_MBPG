@@ -288,7 +288,8 @@ class MBPG_HA(BatchPolopt):
 
         file.close()
         runner.sampler.shutdown_worker()
-        return last_return
+        return last_return, self.policy
+    
     def train_once(self, itr, paths):
         pass
 
