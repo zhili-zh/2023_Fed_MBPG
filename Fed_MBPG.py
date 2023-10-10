@@ -138,6 +138,7 @@ def run_task(snapshot_config, *_):
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
 
+    print("cuda.is_available", torch.cuda.is_available())
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
@@ -241,7 +242,6 @@ def run_task(snapshot_config, *_):
 
     final_policy = init_policy
 
-print("cuda.is_available", torch.cuda.is_available())
 run_experiment(
     run_task,
     snapshot_mode='last',
