@@ -183,7 +183,7 @@ def run_task(snapshot_config, *_):
                    policy_lr= lr,
                    c = c,
                    w = w,
-                   n_timestep=n_timestep,
+                   n_timestep=batch_size*num_local_iterations,
                    #count=count,
                    th = th,
                    batch_size=batch_size,
@@ -194,7 +194,7 @@ def run_task(snapshot_config, *_):
                    beta=beta
                    )
             runner.setup(algo, env)
-            runner.train(n_epochs=num_local_iterations, batch_size=batch_size)
+            runner.train(n_epochs=100, batch_size=batch_size)
             print("finish trainning policy ", index)
 
             # 计算差值，并累加到总差值中
