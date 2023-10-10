@@ -204,21 +204,19 @@ def run_task(snapshot_config, *_):
                    beta=beta
                    )
             runner.setup(algo, env)
-            output1, output2 = runner.train(n_epochs=100, batch_size=batch_size)
-            print("output1", output1)
-            print("output1", output2)
+            _, new_policy = runner.train(n_epochs=100, batch_size=batch_size)
             print("finish trainning policy ", index)
 
             # 计算差值，并累加到总差值中
             print("计算差值，并累加到总差值中")
             for key in init_policy_params:
-                diff = policy.state_dict()[key] - init_policy_params[key]
+                diff = new_policy.state_dict()[key] - init_policy_params[key]
                 total_diff_params[key] += diff
 
             # 计算平均参数
             print("计算平均值")
             for key in init_policy_params:
-                total_avg_params[key] += policy.state_dict()[key] / num_policies
+                total_avg_params[key] += new_policy.state_dict()[key] / num_policies
 
             index = index + 1
 
@@ -232,8 +230,8 @@ def run_task(snapshot_config, *_):
             init_policy.load_state_dict(total_avg_params)
         else:
             print("不使用联邦学习")
-            init_policy = copy.deepcopy(policy)
-            policy_params = policy.state_dict()
+            init_policy = copy.deepcopy(new_policy)
+            policy_params = new_policy.state_dict()
             # 遍历state_dict并打印每层的权重
             for layer_name, param in policy_params.items():
                 print(f"Layer: {layer_name}")
