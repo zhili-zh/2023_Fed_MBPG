@@ -17,13 +17,13 @@ run_tasks() {
 # Function to run special tasks with --simple-avg option for a specific environment three times
 run_special_tasks() {
     env=$1
-    for run in {1..3}; do
+    for run in {1..4}; do
         outfile="Fed_MBPG_${env}_1p0_avg_${run}.out"
         errfile="Fed_MBPG_${env}_1p0_avg_${run}.err"
         nohup python Fed_MBPG.py --env "$env" --beta 1.0 --simple-avg Yes > "$outfile" 2> "$errfile" &
     done
     echo "Special ${env} tasks started."
-    sleep 3600
+    sleep 36000
 }
 
 # Run special tasks
