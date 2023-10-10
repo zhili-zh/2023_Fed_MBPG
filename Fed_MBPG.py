@@ -168,8 +168,9 @@ def run_task(snapshot_config, *_):
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
         # 对每个策略进行训练
-        for index, policy in policies:
-            print("begin to train pplicy ", index)
+        index = 0
+        for policy in policies:
+            print("begin to train policy ", index)
             baseline = LinearFeatureBaseline(env_spec=env.spec)
             algo = MBPG_IM(env_spec=env.spec,
                    env = env,
@@ -199,6 +200,7 @@ def run_task(snapshot_config, *_):
             for key in init_policy_params:
                 diff = policy.state_dict()[key] - init_policy_params[key]
                 total_diff_params[key] += diff
+            index = index + 1
 
         # 使用初始策略的参数和总差值更新每个策略
         for policy in policies:
