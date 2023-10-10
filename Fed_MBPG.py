@@ -174,6 +174,10 @@ def run_task(snapshot_config, *_):
         index = 0
         for policy in policies:
             print("begin to train policy ", index)
+            policy_params = policy.state_dict()
+            for layer_name, param in policy_params.items():
+                print(f"Layer: {layer_name}, Shape: {param.shape}")
+
             baseline = LinearFeatureBaseline(env_spec=env.spec)
             algo = MBPG_IM(env_spec=env.spec,
                    env = env,
@@ -207,6 +211,7 @@ def run_task(snapshot_config, *_):
                 total_diff_params[key] += diff
 
             # 计算平均参数
+            print("计算平均值")
             for key in init_policy_params:
                 total_avg_params[key] += policy.state_dict()[key] / num_policies
 
@@ -223,6 +228,9 @@ def run_task(snapshot_config, *_):
         else:
             print("不使用联邦学习")
             init_policy = copy.deepcopy(policy)
+            policy_params = policy.state_dict()
+            for layer_name, param in policy_params.items():
+                print(f"Layer: {layer_name}, Shape: {param.shape}")
 
 
 
