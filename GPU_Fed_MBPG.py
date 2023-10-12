@@ -8,6 +8,7 @@ from Policy import GaussianMLPPolicy, CategoricalMLPPolicy
 from Algorithms.MBPG import MBPG_IM
 from gym.envs.mujoco import Walker2dEnv, HopperEnv,HalfCheetahEnv
 from gym.envs.classic_control import CartPoleEnv
+from Envs.cartpole import CustomCartPoleEnv
 
 from garage.envs import normalize
 import copy
@@ -35,7 +36,6 @@ def run_task(snapshot_config, *_):
     """
 
     #count = 1
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     th = 1.8
     g_max = 0.05
     star_version = args.IS_MBPG_star
@@ -43,6 +43,7 @@ def run_task(snapshot_config, *_):
     #CartPole
 
         env = TfEnv(normalize(CartPoleEnv()))
+        env = TfEnv(normalize(CustomCartPoleEnv(custom_low_bound=-0.2, custom_high_bound=0.2)))
         runner = LocalRunner(snapshot_config)
         batch_size = 5000
         max_length = 100
@@ -139,12 +140,13 @@ def run_task(snapshot_config, *_):
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
 
+    print("cuda.is_available", torch.cuda.is_available())
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
     print("simple_avg:", args.simple_avg)
     print("local_lr:", lr)
-    print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
+    # print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
     print("beta:", args.beta)
 
 
@@ -160,16 +162,15 @@ def run_task(snapshot_config, *_):
                                         hidden_nonlinearity=torch.tanh,
                                         output_nonlinearity=None)
 
-    init_policy = init_policy.to(device)
     # 循环num_global_iterations次
     for iteration in range(num_global_iterations):
         # print("begin to train policies of iteration ", iteration)
 
         # 初始化5个策略，它们一开始都与初始策略相同
-        policies = [copy.deepcopy(init_policy).to(device) for _ in range(num_policies)]
+        policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
         init_policy_params = init_policy.state_dict()
-        total_diff_params = {k: torch.zeros_like(v).to(device) for k, v in init_policy_params.items()}
-        total_avg_params = {k: torch.zeros_like(v).to(device) for k, v in init_policy_params.items()}
+        total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
+        total_avg_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
         
         # 对每个策略进行训练
@@ -241,8 +242,21 @@ def run_task(snapshot_config, *_):
             #     print("-----------------------------")
 
 
-    final_policy = init_policy.to("cpu")
+    final_policy = init_policy
 
+from send_email import *
+# Emails = ServerEmail(mail_host="smtp.gmail.com", 
+#                                     mail_sender="cocohe.conn@gmail.com", 
+#                                     mail_license="", 
+#                                     mail_receivers="cocohe.conn@gmail.com", 
+#                                     server_name='miao-exxact')
+# Emails.send_begin_email(exp_name = args, arglist = args)
+# run_experiment(
+#     run_task,
+#     snapshot_mode='last',
+#     seed=1,
+# )
+# Emails.send_end_email(exp_name = args, arglist = args)
 
 run_experiment(
     run_task,
