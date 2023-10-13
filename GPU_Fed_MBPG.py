@@ -9,6 +9,10 @@ from Algorithms.MBPG import MBPG_IM
 from gym.envs.mujoco import Walker2dEnv, HopperEnv,HalfCheetahEnv
 from gym.envs.classic_control import CartPoleEnv
 from Envs.cartpole import CustomCartPoleEnv
+from Envs.halfcheetah import CustomHalfCheetahEnv
+from Envs.hopper import CustomHopperEnv
+from Envs.walker2d import CustomWalker2dEnv
+import numpy as np
 
 from garage.envs import normalize
 import copy
@@ -39,11 +43,14 @@ def run_task(snapshot_config, *_):
     th = 1.8
     g_max = 0.05
     star_version = args.IS_MBPG_star
+    env_list = []
+    sample_noise_list = []
     if args.env == 'CartPole':
     #CartPole
-
-        env = TfEnv(normalize(CartPoleEnv()))
-        env = TfEnv(normalize(CustomCartPoleEnv(custom_low_bound=-0.2, custom_high_bound=0.2)))
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.005, 0.005)
+            env_list.append(TfEnv(normalize(CustomCartPoleEnv(custom_low_bound=-0.05-sample_noise, custom_high_bound=0.05+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
         batch_size = 5000
         max_length = 100
@@ -71,7 +78,10 @@ def run_task(snapshot_config, *_):
 
     if args.env == 'Walker':
         #Walker_2d
-        env = TfEnv(normalize(Walker2dEnv()))
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.0005, 0.0005)
+            env_list.append(TfEnv(normalize(CustomWalker2dEnv(custom_low_bound=-0.005-sample_noise, custom_high_bound=0.005+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
         batch_size = 50000
         max_length = 500
@@ -94,7 +104,16 @@ def run_task(snapshot_config, *_):
 
     if args.env == 'Hopper':
         #Hopper
-        env = TfEnv(normalize(HopperEnv()))
+        # Set up the environment using the CustomHopperEnv with normalized observations and actions.
+        # Create a LocalRunner with the given snapshot configuration.
+        # Define hyperparameters for the algorithm, including batch size, maximum episode length, threshold for clipping gradients,
+        # number of timesteps to run, learning rate, weight for the value function loss, coefficient for the entropy bonus,
+        # gradient factor for the trust region constraint, maximum gradient norm, and discount factor.
+        # Set the name of the environment to 'Hopper'.
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.0005, 0.0005)
+            env_list.append(TfEnv(normalize(CustomHopperEnv(custom_low_bound=-0.005-sample_noise, custom_high_bound=0.005+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
 
         batch_size = 50000
@@ -113,7 +132,10 @@ def run_task(snapshot_config, *_):
         path = './init/Hopper_policy.pth'
 
     if args.env == 'HalfCheetah':
-        env = TfEnv(normalize(HalfCheetahEnv()))
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.01, 0.01)
+            env_list.append(TfEnv(normalize(CustomHalfCheetahEnv(custom_low_bound=-0.1-sample_noise, custom_high_bound=0.1+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
         batch_size = 10000
         #batch_size = 50000
@@ -144,20 +166,21 @@ def run_task(snapshot_config, *_):
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
-    print("simple_avg:", args.simple_avg)
+    # print("simple_avg:", args.simple_avg)
+    print("sample_noise_list:", sample_noise_list)
     print("local_lr:", lr)
-    # print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
+    # print("coef:", global_lr / (lr * args.num_agent * args.local_iteration))
     print("beta:", args.beta)
 
 
     # 初始化一个初始策略
     if args.env == 'CartPole':
-        init_policy = CategoricalMLPPolicy(env.spec,
+        init_policy = CategoricalMLPPolicy(env_list[0].spec,
                                         hidden_sizes=[8, 8],
                                         hidden_nonlinearity=torch.tanh,
                                         output_nonlinearity=None)
     else:
-        init_policy = GaussianMLPPolicy(env.spec,
+        init_policy = GaussianMLPPolicy(env_list[0].spec,
                                         hidden_sizes=[64, 64],
                                         hidden_nonlinearity=torch.tanh,
                                         output_nonlinearity=None)
@@ -175,7 +198,8 @@ def run_task(snapshot_config, *_):
         
         # 对每个策略进行训练
         index = 0
-        for policy in policies:
+        for i, env in enumerate(env_list):
+            policy = policies[i]
             # print("begin to train policy ", index)
             policy_params = policy.state_dict()
             # 遍历state_dict并打印每层的权重
