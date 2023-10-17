@@ -167,7 +167,7 @@ def run_task(snapshot_config, *_):
                                        hidden_nonlinearity=torch.tanh,
                                        output_nonlinearity=None)
 
-    init_policy.load_state_dict(torch.load(path))
+    # init_policy.load_state_dict(torch.load(path))
     for iteration in range(num_global_iterations):
         # 初始化5个策略，它们一开始都与初始策略相同
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
