@@ -74,7 +74,8 @@ class MBPG_HA(BatchPolopt):
             g_max=0.06,
             delta = 1e-7,
             entropy_method='no_entropy',
-            log_dir='./log'
+            log_dir='./log',
+            beta = 0.01,
     ):
         self._env_spec = env_spec
         self.env = env
@@ -86,6 +87,7 @@ class MBPG_HA(BatchPolopt):
         self._stop_entropy_gradient = stop_entropy_gradient
         self._entropy_method = entropy_method
         self._eps = 1e-8
+        self.a = torch.Tensor([beta])
 
         self.delta =delta
 
@@ -235,8 +237,8 @@ class MBPG_HA(BatchPolopt):
 
         self._policy.set_param_values(params)
 
-        self.a = torch.min(torch.Tensor([1.0]), self.c * (eta_t ** 2))
-        self.a = torch.max(self.a, torch.Tensor([0.3]))
+        # self.a = torch.min(torch.Tensor([1.0]), self.c * (eta_t ** 2))
+        # self.a = torch.max(self.a, torch.Tensor([0.3]))
         #print(self.a.item())
         # print(G_p.item())
         # print(self.c * (eta_t ** 2))

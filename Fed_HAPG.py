@@ -12,6 +12,11 @@ from gym.envs.classic_control import CartPoleEnv
 from garage.envs import normalize
 import copy
 import argparse
+from Envs.cartpole import CustomCartPoleEnv
+from Envs.halfcheetah import CustomHalfCheetahEnv
+from Envs.hopper import CustomHopperEnv
+from Envs.walker2d import CustomWalker2dEnv
+import numpy as np
 
 parser = argparse.ArgumentParser(description='FedHAPG-M for DRL in mujoco')
 parser.add_argument('--env', default='CartPole', type=str, help='choose environment from [CartPole, Walker, Hopper, HalfCheetah]')
@@ -35,11 +40,15 @@ def run_task(snapshot_config, *_):
 
     th = 1.8
     g_max = 0.1
+    env_list = []
+    sample_noise_list = []
     #delta = 1e-7
     if args.env == 'CartPole':
         #CartPole
-
-        env = TfEnv(normalize(CartPoleEnv()))
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.005, 0.005)
+            env_list.append(TfEnv(normalize(CustomCartPoleEnv(custom_low_bound=-0.05-sample_noise, custom_high_bound=0.05+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
         batch_size = 5000
         max_length = 100
@@ -63,7 +72,10 @@ def run_task(snapshot_config, *_):
 
     if args.env == 'Walker':
         #Walker_2d
-        env = TfEnv(normalize(Walker2dEnv()))
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.0005, 0.0005)
+            env_list.append(TfEnv(normalize(CustomWalker2dEnv(custom_low_bound=-0.005-sample_noise, custom_high_bound=0.005+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
         batch_size = 50000
         max_length = 500
@@ -81,7 +93,10 @@ def run_task(snapshot_config, *_):
         path = './init/Walk_policy.pth'
 
     if args.env == 'HalfCheetah':
-        env = TfEnv(normalize(HalfCheetahEnv()))
+        for _ in range(args.num_agent):
+            sample_noise = np.random.uniform(-0.0005, 0.0005)
+            env_list.append(TfEnv(normalize(CustomHopperEnv(custom_low_bound=-0.005-sample_noise, custom_high_bound=0.005+sample_noise))))
+            sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
 
         batch_size = 50000
@@ -103,7 +118,10 @@ def run_task(snapshot_config, *_):
 
     if args.env == 'Hopper':
         #Hopper
-        env = TfEnv(normalize(HopperEnv()))
+        for _ in range(args.num_agent):
+                sample_noise = np.random.uniform(-0.01, 0.01)
+                env_list.append(TfEnv(normalize(CustomHalfCheetahEnv(custom_low_bound=-0.1-sample_noise, custom_high_bound=0.1+sample_noise))))
+                sample_noise_list.append(sample_noise)
         runner = LocalRunner(snapshot_config)
 
         batch_size = 50000
@@ -132,24 +150,24 @@ def run_task(snapshot_config, *_):
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
-    print("simple_avg:", args.simple_avg)
+    # print("simple_avg:", args.simple_avg)
+    print("sample_noise_list:", sample_noise_list)
     print("local_lr:", lr)
     print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
     print("beta:", args.beta)
 
     if args.env == 'CartPole':
-        init_policy = CategoricalMLPPolicy(env.spec,
+        init_policy = CategoricalMLPPolicy(env_list[0].spec,
                                     hidden_sizes=[8, 8],
                                     hidden_nonlinearity=torch.tanh,
                                     output_nonlinearity=None)
     else:
-        init_policy = GaussianMLPPolicy(env.spec,
+        init_policy = GaussianMLPPolicy(env_list[0].spec,
                                     hidden_sizes=[64, 64],
                                        hidden_nonlinearity=torch.tanh,
                                        output_nonlinearity=None)
 
     init_policy.load_state_dict(torch.load(path))
-
     for iteration in range(num_global_iterations):
         # 初始化5个策略，它们一开始都与初始策略相同
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
@@ -157,11 +175,14 @@ def run_task(snapshot_config, *_):
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
         total_avg_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
 
-        for policy in policies:
+        for i, env in enumerate(env_list):
+            policy = policies[i]
+            # print("begin to train policy ", index)
+            policy_params = policy.state_dict()
             baseline = LinearFeatureBaseline(env_spec=env.spec)
             algo = MBPG_HA(env_spec=env.spec,
                     env = env,
-                        env_name= name,
+                    env_name= name,
                     policy=policy,
                     baseline=baseline,
                     max_path_length=max_length,
@@ -173,9 +194,9 @@ def run_task(snapshot_config, *_):
                     th=th,
                     g_max=g_max,
                     n_timestep=batch_size*num_local_iterations,
-
                     batch_size=batch_size,
                     center_adv=True,
+                    beta=beta
                     # delta=delta
                     #decay_learning_rate=d_lr,
                     )
