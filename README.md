@@ -17,5 +17,5 @@ To run average baselines
 nohup python Avg_MBPG.py --env CartPole > Avg_MBPG_test_pin.out 2> Avg_MBPG_test_pin.err &
 ```
 
-To run different environments change --env to one of the followings: "CartPole", "Walker", "Hopper" or "HalfCheetah". 
+To run different environments change --env to one of the following: "CartPole", "Walker", "Hopper" or "HalfCheetah". 
 
