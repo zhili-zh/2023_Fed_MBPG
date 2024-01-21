@@ -131,6 +131,7 @@ dependencies:
     - tensorboardx==2.6.2.2
     - tensorflow==1.15.5
     - tensorflow-estimator==1.15.1
+    - tensorflow-gpu==1.15.5
     - tensorflow-probability==0.9.0
     - termcolor==1.1.0
     - tifffile==2020.9.3

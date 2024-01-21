@@ -1,0 +1,88 @@
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Obtaining samples...
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Obtaining samples for iteration 0...
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Logging diagnostics...
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Optimizing policy...
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Computing loss before
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Computing KL before
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Optimizing
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Start CG optimization: #parameters: 1282, #inputs: 256, #subsample_inputs: 256
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | computing loss before
+2023-10-07 19:56:52 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | computing gradient
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | gradient computed
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | computing descent direction
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | descent direction computed
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | backtrack iters: 1
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | optimization finished
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Computing KL after
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Computing loss after
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Fitting baseline...
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Saving snapshot...
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Saved
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | Time 1.29 s
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #0 | EpochTime 1.29 s
+---------------------------------------  -------------
+AverageDiscountedReturn                   14.4092
+AverageReturn                             15.6875
+Entropy                                    0.623331
+EnvExecTime                                0.0549986
+Extras/EpisodeRewardMean                  15.86
+Iteration                                  0
+LinearFeatureBaseline/ExplainedVariance   -3.1924e-08
+MaxReturn                                 45
+MinReturn                                  8
+NumTrajs                                 256
+Perplexity                                 1.86513
+PolicyExecTime                             0.437508
+ProcessExecTime                            0.0189056
+StdReturn                                  6.52729
+policy/Entropy                             0.641655
+policy/KL                                  0.00384139
+policy/KLBefore                            0
+policy/LossAfter                          -0.000844445
+policy/LossBefore                         -1.28566e-06
+policy/dLoss                               0.00084316
+---------------------------------------  -------------
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Obtaining samples...
+2023-10-07 19:56:53 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Obtaining samples for iteration 1...
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Logging diagnostics...
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Optimizing policy...
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Computing loss before
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Computing KL before
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Optimizing
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Start CG optimization: #parameters: 1282, #inputs: 266, #subsample_inputs: 266
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | computing loss before
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | computing gradient
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | gradient computed
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | computing descent direction
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | descent direction computed
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | backtrack iters: 2
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | optimization finished
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Computing KL after
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Computing loss after
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Fitting baseline...
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Saving snapshot...
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Saved
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | Time 2.13 s
+2023-10-07 19:56:54 | [experiment_2023_10_07_19_56_46_0001] epoch #1 | EpochTime 0.83 s
+---------------------------------------  -------------
+AverageDiscountedReturn                   13.9044
+AverageReturn                             15.0752
+Entropy                                    0.639682
+EnvExecTime                                0.0517087
+Extras/EpisodeRewardMean                  15.13
+Iteration                                  1
+LinearFeatureBaseline/ExplainedVariance    0.405215
+MaxReturn                                 59
+MinReturn                                  8
+NumTrajs                                 266
+Perplexity                                 1.89588
+PolicyExecTime                             0.356058
+ProcessExecTime                            0.0181062
+StdReturn                                  6.11804
+policy/Entropy                             0.657382
+policy/KL                                  0.00900237
+policy/KLBefore                            0
+policy/LossAfter                          -0.0405121
+policy/LossBefore                          1.31398e-08
+policy/dLoss                               0.0405121
+---------------------------------------  -------------

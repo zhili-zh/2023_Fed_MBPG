@@ -1,0 +1,620 @@
+num_policies: 5
+num_global_iterations: 50
+num_local_iterations: 10
+simple_avg: Yes
+local_lr: 0.6
+coef: 0.02
+beta: 1.0
+2023-10-09 19:29:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:29:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -232.35163835504878
+20
+20
+tensor(1.)
+2023-10-09 19:32:06 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:32:06 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -211.40400643608365
+20
+20
+tensor(4.9430e-11)
+2023-10-09 19:34:26 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:34:26 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -197.0082163676713
+20
+20
+tensor(2.4353e-07)
+2023-10-09 19:36:45 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:36:45 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -198.1293625681248
+20
+20
+tensor(2.1127e-07)
+2023-10-09 19:39:05 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:39:05 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -208.51859207820797
+20
+20
+tensor(8.1624e-07)
+2023-10-09 19:44:58 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:44:58 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -242.85310751319577
+20
+20
+tensor(1.6307e-10)
+2023-10-09 19:52:15 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:52:15 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -207.07979627307287
+20
+20
+tensor(6.3309e-05)
+2023-10-09 19:59:29 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 19:59:29 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+python -m garage.experiment.experiment_wrapper  --snapshot_mode 'last'  --seed '1'  --exp_name 'experiment_2023_10_09_19_29_34_0001'  --log_dir '/home/sih19006/2023fedRL/2023_Fed_MBPG/data/local/experiment/experiment_2023_10_09_19_29_34_0001'  --args_data 'gASVoRAAAAAAAACMF2Nsb3VkcGlja2xlLmNsb3VkcGlja2xllIwOX21ha2VfZnVuY3Rpb26Uk5QoaACMDV9idWlsdGluX3R5cGWUk5SMCENvZGVUeXBllIWUUpQoSwFLAEskSxZLB0J8AwAAZAF9AmQCfQN0AGoBfQR0AGoCZANrAnJadAN0BHQFgwCDAYMBfQV0BnwAgwF9BmQEfQdkBX0IZAZ9CWQDfQpkBX0LZAd9AmQIfQxkCX0NZAl9DmQKfQ9kC30QdABqAmQMawJypnQDdAR0B4MAgwGDAX0FdAZ8AIMBfQZkDX0HZA59CGQHfQJkD30JZAh9DGQQfQ5kEX0NZBJ9C2QTfQ9kFH0KZBV9EHQAagJkFmsCcvZ0A3QEdAiDAIMBgwF9BXQGfACDAX0GZA19B2QXfQhkGH0CZA99CWQIfQxkCX0OZBl9DWQSfQtkGn0DZBN9D2QWfQpkG30QdABqAmQcawKQAXJIdAN0BHQJgwCDAYMBfQV0BnwAgwF9BmQdfQdkDn0IZA99CWQefQxkGX0OZB99DWQSfQtkB30CZCB9A2QTfQ9kHH0KZCF9EHQAagp9EXQAagt9EnQAagx9E2QefRR8DH0VfBR8FXwRFAB8ExQAGwCJAHQAag19FnQOZCJ0AGoKgwIBAHQOZCN0AGoLgwIBAHQOZCR0AGoMgwIBAHQOZCV0AGoPgwIBAHQOZCZ8DIMCAQB0DmQnZB58DHQAagoUAHQAagwUABsAgwIBAHQOZCh0AGoNgwIBAHQAagJkA2sCkAFy/nQQfAVqEWQpZClnAnQSahNkKmQrjQSJAW4YdBR8BWoRZCxkLGcCdBJqE2QqZCuNBIkBkAF4WnQVfBKDAUQAkAFdTH0XhwFmAWQtZC6ECHQVfBGDAUQAgwF9GIgBahaDAIkCZC9kMIQAiAJqF4MARACDAYkDZDFkMIQAiAJqF4MARACDAX0ZZDJ9GniufBhEAF2mfRt8G2oWgwB9HHQYfAVqEWQzjQF9HXQZfAVqEXwFfAp8G3wdfAh8D3wLfAx8DXwOfAd8ExQAfAJ8B2Q0fAN8BHwWZDWNEn0efAZqGnwefAWDAgEAfAZqG2QFfAdkNo0CXAJ9AX0feDKIAkQAXSp9IHwfahaDAHwgGQCIAnwgGQAYAH0hiAN8IAUAGQB8ITcAAwA8AJACceJXAHwaZAkXAH0a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aWNhbE1MUFBvbGljeZSMBHNwZWOUaC6MBHRhbmiUjBFHYXVzc2lhbk1MUFBvbGljeZSMBXJhbmdllIwKc3RhdGVfZGljdJSMBWl0ZW1zlIwVTGluZWFyRmVhdHVyZUJhc2VsaW5llIwHTUJQR19JTZSMBXNldHVwlIwFdHJhaW6UjA9sb2FkX3N0YXRlX2RpY3SUaB9oIHSUKIwPc25hcHNob3RfY29uZmlnlGgjaExoT2hQaEGMBnJ1bm5lcpRoTYwKbWF4X2xlbmd0aJRoS4wEbmFtZZRoR4wCbHKUaEloSmhGjARwYXRolIwMbnVtX3BvbGljaWVzlIwVbnVtX2dsb2JhbF9pdGVyYXRpb25zlIwUbnVtX2xvY2FsX2l0ZXJhdGlvbnOUjAlnbG9iYWxfbHKUjAhsb2NhbF9scpRoUYwJaXRlcmF0aW9ulIwIcG9saWNpZXOUjBB0b3RhbF9hdmdfcGFyYW1zlIwFaW5kZXiUaEOMDXBvbGljeV9wYXJhbXOUaESMBGFsZ2+UjApuZXdfcG9saWN5lIwDa2V5lIwEZGlmZpSMDnVwZGF0ZWRfcGFyYW1zlIwMZmluYWxfcG9saWN5lHSUaCWMCHJ1bl90YXNrlEscQ/gACgQBBAEGAQoDDgEIAQQBBAEEAQQCBAEEBwQBBAEEBgQBBAIKAg4BCAEEAQQCBAIEAQQBBAEEAQQFBAIEAQQCCgIOAQgCBAIEAQQBBAEEAQQBBAEEAQQBBAIEAQQCDAEOAQgBBAIEAgQBBAEEAQQBBAEEAQQCBAIEAQQCBgEGAQYBBAEEARABBgIMAQwBDAEMAQoBGgEMBAwBBgEGAQQBCgIGAQYBBAEIAxIEFgEIARIBEgQEAQoCCAcMAQYBAgECAQIBAgECAQIBAgECAQIBAgEGAgIBAgECAQICAgEIAgwBEgUKARQBFgcOAwwCFgEMAQwCDAMQCZQpKGhZaChoWmhbdJR0lFKUfZQojAtfX3BhY2thZ2VfX5ROjAhfX25hbWVfX5SMCF9fbWFpbl9flIwIX19maWxlX1+UjAtGZWRfTUJQRy5weZR1Tk5OdJRSlIwcY2xvdWRwaWNrbGUuY2xvdWRwaWNrbGVfZmFzdJSMEl9mdW5jdGlvbl9zZXRzdGF0ZZSTlGiffZR9lChommiTjAxfX3F1YWxuYW1lX1+UaJOMD19fYW5ub3RhdGlvbnNfX5R9lIwOX19rd2RlZmF1bHRzX1+UTowMX19kZWZhdWx0c19flE6MCl9fbW9kdWxlX1+UaJuMB19fZG9jX1+UaAmMC19fY2xvc3VyZV9flE6MF19jbG91ZHBpY2tsZV9zdWJtb2R1bGVzlF2UjAtfX2dsb2JhbHNfX5R9lChoYYwIYXJncGFyc2WUjAlOYW1lc3BhY2WUk5QpgZR9lChoQYwLSGFsZkNoZWV0YWiUaGKJaFFHP/AAAAAAAABoaksFaGtLMmhsSwpobowDWWVzlHViaGOME2dhcmFnZS50Zi5lbnZzLmJhc2WUaGOTlGhkjBpnYXJhZ2UuZW52cy5ub3JtYWxpemVkX2VudpSMDU5vcm1hbGl6ZWRFbnaUk5RoZYwhZ3ltLmVudnMuY2xhc3NpY19jb250cm9sLmNhcnRwb2xllGhlk5RoZoweZ2FyYWdlLmV4cGVyaW1lbnQubG9jYWxfcnVubmVylGhmk5RoZ4wYZ3ltLmVudnMubXVqb2NvLndhbGtlcjJklGhnk5RoaIwWZ3ltLmVudnMubXVqb2NvLmhvcHBlcpRoaJOUaGmMHGd5bS5lbnZzLm11am9jby5oYWxmX2NoZWV0YWiUaGmTlGhvjBtQb2xpY3kuQ2F0ZWdvcmljYWxNTFBQb2xpY3mUaG+TlGguaACMCXN1YmltcG9ydJSTlGguhZRSlGhyjBhQb2xpY3kuR2F1c3NpYW5NTFBQb2xpY3mUaHKTlGh2jCtnYXJhZ2UubnAuYmFzZWxpbmVzLmxpbmVhcl9mZWF0dXJlX2Jhc2VsaW5llGh2k5Rod4wPQWxnb3JpdGhtcy5NQlBHlGh3k5RoH2jKaB+FlFKUdXWGlIZSMC4='  --variant_data 'gAN9cQBYCAAAAGV4cF9uYW1lcQFYIwAAAGV4cGVyaW1lbnRfMjAyM18xMF8wOV8xOV8yOV8zNF8wMDAxcQJzLg=='
+timesteps: 80000 average return:  -196.34622825252046
+20
+20
+tensor(8.5179e-06)
+2023-10-09 20:06:50 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:06:50 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -183.14496808028213
+20
+20
+tensor(0.0024)
+2023-10-09 20:14:15 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:14:15 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -201.8464609713748
+20
+20
+tensor(1.)
+2023-10-09 20:22:21 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:22:21 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -199.28742566916364
+20
+20
+tensor(2.1304e-10)
+2023-10-09 20:30:52 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:30:52 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -222.36702049246747
+20
+20
+tensor(1.8711e-06)
+2023-10-09 20:39:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:39:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -222.4665024413252
+20
+20
+tensor(6.5108e-07)
+2023-10-09 20:48:20 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:48:20 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -238.54632074160614
+20
+20
+tensor(0.0058)
+2023-10-09 20:57:17 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 20:57:17 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -243.6232557218158
+20
+20
+tensor(0.0003)
+2023-10-09 21:05:45 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:05:45 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -230.1802518489963
+20
+20
+tensor(8.5792e-07)
+2023-10-09 21:14:21 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:14:21 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -253.62356436450915
+20
+20
+tensor(1.0698e-06)
+2023-10-09 21:22:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:22:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -260.10246546198425
+20
+20
+tensor(0.0003)
+2023-10-09 21:30:06 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:30:06 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -221.57365291445643
+20
+20
+tensor(1.)
+2023-10-09 21:37:50 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:37:50 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -229.24126269016045
+20
+20
+tensor(4.1150e-06)
+2023-10-09 21:45:52 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:45:52 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -217.057454933604
+20
+20
+tensor(6.7524e-05)
+2023-10-09 21:54:12 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 21:54:12 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -244.32267298492215
+20
+20
+tensor(0.0004)
+2023-10-09 22:02:19 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:02:19 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -214.73825258741914
+20
+20
+tensor(0.0002)
+2023-10-09 22:10:33 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:10:33 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -190.03421510092676
+20
+20
+tensor(8.5692e-05)
+2023-10-09 22:18:49 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:18:49 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -220.10231112671977
+20
+20
+tensor(4.3784e-09)
+2023-10-09 22:27:12 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:27:12 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -221.75766877387787
+20
+20
+tensor(1.2912e-05)
+2023-10-09 22:35:26 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:35:26 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -233.90194923442021
+20
+20
+tensor(5.4816e-05)
+2023-10-09 22:43:43 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:43:43 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -231.95135414452656
+20
+20
+tensor(1.)
+2023-10-09 22:52:09 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 22:52:09 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -257.5939313734466
+20
+20
+tensor(5.8266e-05)
+2023-10-09 23:00:07 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:00:07 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -250.11865068503752
+20
+20
+tensor(5.8291e-12)
+2023-10-09 23:08:31 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:08:31 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -231.61418667002354
+20
+20
+tensor(1.9674e-10)
+2023-10-09 23:16:46 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:16:46 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -251.06896546029742
+20
+20
+tensor(9.9697e-05)
+2023-10-09 23:25:12 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:25:12 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -199.93998184682508
+20
+20
+tensor(0.0001)
+2023-10-09 23:33:14 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:33:14 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -235.43571678089384
+20
+20
+tensor(7.9384e-07)
+2023-10-09 23:41:24 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:41:24 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -207.43145709398
+20
+20
+tensor(0.0204)
+2023-10-09 23:49:44 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:49:44 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -187.73819512810002
+20
+20
+tensor(0.0007)
+2023-10-09 23:58:01 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-09 23:58:01 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -221.89521433645217
+20
+20
+tensor(1.)
+2023-10-10 00:06:23 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:06:23 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -214.5360846936755
+20
+20
+tensor(0.0026)
+2023-10-10 00:14:39 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:14:39 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -207.8320338581318
+20
+20
+tensor(1.8213e-07)
+2023-10-10 00:22:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:22:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -225.1896168640723
+20
+20
+tensor(1.2331e-06)
+2023-10-10 00:30:49 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:30:49 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -264.7570411233322
+20
+20
+tensor(1.1462e-05)
+2023-10-10 00:39:23 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:39:23 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -220.23366157577985
+20
+20
+tensor(1.2000)
+2023-10-10 00:47:38 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:47:38 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -243.02223751986418
+20
+20
+tensor(0.0398)
+2023-10-10 00:55:56 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 00:55:56 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -225.07157187005959
+20
+20
+tensor(0.0021)
+2023-10-10 01:04:10 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:04:10 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -224.0103253801452
+20
+20
+tensor(0.0563)
+2023-10-10 01:12:22 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:12:22 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -160.37147664348493
+20
+20
+tensor(1.)
+2023-10-10 01:20:38 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:20:38 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -168.92408201816056
+20
+20
+tensor(1.2000)
+2023-10-10 01:28:56 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:28:56 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -153.6381007136894
+20
+20
+tensor(1.2000)
+2023-10-10 01:37:29 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:37:29 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -179.88380224495035
+20
+20
+tensor(1.2000)
+2023-10-10 01:45:59 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:45:59 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -172.55271559415493
+20
+20
+tensor(1.2000)
+2023-10-10 01:53:59 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 01:53:59 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -171.26511508460172
+20
+20
+tensor(1.2000)
+2023-10-10 02:02:22 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:02:22 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -166.55613446493007
+20
+20
+tensor(1.2000)
+2023-10-10 02:10:32 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:10:32 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -200.90826592481815
+20
+20
+tensor(1.2000)
+2023-10-10 02:18:47 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:18:47 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -165.37924576724726
+20
+20
+tensor(1.2000)
+2023-10-10 02:27:09 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:27:09 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -153.13212213675047
+20
+20
+tensor(1.)
+2023-10-10 02:35:34 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:35:34 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -162.54292755272166
+20
+20
+tensor(1.2000)
+2023-10-10 02:43:43 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:43:43 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -165.75111915380458
+20
+20
+tensor(1.2000)
+2023-10-10 02:52:01 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 02:52:01 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -169.49077132432882
+20
+20
+tensor(1.2000)
+2023-10-10 03:00:15 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:00:15 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -150.6949861791292
+20
+20
+tensor(1.2000)
+2023-10-10 03:08:47 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:08:47 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -182.91375361685118
+20
+20
+tensor(1.2000)
+2023-10-10 03:16:52 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:16:52 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -165.16622796129332
+20
+20
+tensor(1.2000)
+2023-10-10 03:24:49 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:24:49 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -175.21282751858263
+20
+20
+tensor(1.2000)
+2023-10-10 03:32:56 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:32:56 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -171.9475416936293
+20
+20
+tensor(1.2000)
+2023-10-10 03:40:58 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:40:58 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -159.86845080419002
+20
+20
+tensor(1.)
+2023-10-10 03:48:46 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:48:46 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -163.57160028266912
+20
+20
+tensor(1.2000)
+2023-10-10 03:56:42 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 03:56:42 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -179.01074558641105
+20
+20
+tensor(1.2000)
+2023-10-10 04:05:02 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:05:02 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -190.5654698720657
+20
+20
+tensor(1.2000)
+2023-10-10 04:13:11 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:13:11 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -160.1805485434973
+20
+20
+tensor(1.2000)
+2023-10-10 04:21:26 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:21:26 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -167.43189721310426
+20
+20
+tensor(1.2000)
+2023-10-10 04:29:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:29:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -171.523855935171
+20
+20
+tensor(1.2000)
+2023-10-10 04:37:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:37:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -198.18670093500924
+20
+20
+tensor(1.2000)
+2023-10-10 04:45:33 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:45:33 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -172.27109529936453
+20
+20
+tensor(1.2000)
+2023-10-10 04:53:34 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 04:53:34 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -153.14123628508577
+20
+20
+tensor(1.)
+2023-10-10 05:01:40 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:01:40 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -181.86098787436367
+20
+20
+tensor(1.2000)
+2023-10-10 05:09:53 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:09:53 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -175.99611396539206
+20
+20
+tensor(1.2000)
+2023-10-10 05:17:59 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:17:59 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -154.40673874437897
+20
+20
+tensor(1.2000)
+2023-10-10 05:26:00 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:26:00 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -152.29959466319403
+20
+20
+tensor(1.2000)
+2023-10-10 05:33:57 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:33:57 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -162.71033415835467
+20
+20
+tensor(1.2000)
+2023-10-10 05:42:00 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:42:00 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.
+timesteps: 70000 average return:  -169.8648610105543
+20
+20
+tensor(1.2000)
+2023-10-10 05:50:00 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:50:00 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 70000...
+Warning: No valid output stream.
+timesteps: 80000 average return:  -192.40260782648812
+20
+20
+tensor(1.2000)
+2023-10-10 05:58:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 05:58:28 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 80000...
+Warning: No valid output stream.
+timesteps: 90000 average return:  -164.96157706963012
+20
+20
+tensor(1.2000)
+2023-10-10 06:06:42 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 06:06:42 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 10000 average return:  -198.3657929298456
+20
+20
+tensor(1.)
+2023-10-10 06:14:44 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 06:14:44 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 10000...
+Warning: No valid output stream.
+timesteps: 20000 average return:  -151.48538600187763
+20
+20
+tensor(1.2000)
+2023-10-10 06:23:39 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 06:23:39 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 20000...
+Warning: No valid output stream.
+timesteps: 30000 average return:  -175.5486071797135
+20
+20
+tensor(1.2000)
+2023-10-10 06:32:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 06:32:48 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 30000...
+Warning: No valid output stream.
+timesteps: 40000 average return:  -171.71423165479396
+20
+20
+tensor(1.2000)
+2023-10-10 06:42:11 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 06:42:11 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 40000...
+Warning: No valid output stream.
+timesteps: 50000 average return:  -158.98201175853796
+20
+20
+tensor(1.2000)
+2023-10-10 06:51:19 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 06:51:19 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 50000...
+Warning: No valid output stream.
+timesteps: 60000 average return:  -165.17907511714114
+20
+20
+tensor(1.2000)
+2023-10-10 07:00:33 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples...
+2023-10-10 07:00:33 | [experiment_2023_10_09_19_29_34_0001] Obtaining samples for iteration 60000...
+Warning: No valid output stream.

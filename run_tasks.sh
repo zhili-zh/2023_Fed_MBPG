@@ -1,43 +1,65 @@
 #!/bin/bash
 
-# Function to run general tasks for a specific environment three times
-run_tasks() {
-    env=$1
-    for run in {1..3}; do
-        for beta in 0.0 0.1 0.2 0.5 0.8 1.0; do
-            outfile="Fed_MBPG_${env}_${beta//./p}_${run}.out"
-            errfile="Fed_MBPG_${env}_${beta//./p}_${run}.err"
-            nohup python Fed_MBPG.py --env "$env" --beta "$beta" > "$outfile" 2> "$errfile" &
-        done
-        echo "${env} tasks for run ${run} started."
-        sleep 7200
-    done
-}
+# 第一个命令
+nohup python Fed_MBPG.py --global-iteration 150 --num-agent 2 --env HalfCheetah --beta 0.2 > Fed_MBPG_HalfCheetah_0p2_gi150_a2.out 2> Fed_MBPG_HalfCheetah_0p2_gi150_a2.err &
+pid1=$!
 
-# Function to run special tasks with --simple-avg option for a specific environment three times
-run_special_tasks() {
-    env=$1
-    for run in {1..4}; do
-        outfile="Fed_MBPG_${env}_1p0_avg_${run}.out"
-        errfile="Fed_MBPG_${env}_1p0_avg_${run}.err"
-        nohup python Fed_MBPG.py --env "$env" --beta 1.0 --simple-avg Yes > "$outfile" 2> "$errfile" &
-    done
-    echo "Special ${env} tasks started."
-    sleep 36000
-}
+# 休息2小时
+sleep 7200
 
-# Run special tasks
-run_special_tasks CartPole
-run_special_tasks Walker
-run_special_tasks Hopper
-run_special_tasks HalfCheetah
+# 第二个命令
+nohup python Fed_MBPG.py --global-iteration 150 --num-agent 2 --env HalfCheetah --beta 0.5 > Fed_MBPG_HalfCheetah_0p5_gi150_a2.out 2> Fed_MBPG_HalfCheetah_0p5_gi150_a2.err &
+pid2=$!
 
-echo "All avg tasks scheduled."
+# 休息2小时
+sleep 7200
 
-# Run tasks
-run_tasks CartPole
-run_tasks Walker
-run_tasks Hopper
-run_tasks HalfCheetah
+# 第三个命令
+nohup python Fed_MBPG.py --global-iteration 150 --num-agent 2 --env HalfCheetah --beta 0.8 > Fed_MBPG_HalfCheetah_0p8_gi150_a2.out 2> Fed_MBPG_HalfCheetah_0p8_gi150_a2.err &
+pid3=$!
 
-echo "All fed tasks scheduled."
+# 休息2小时
+sleep 7200
+
+# 第四个命令
+nohup python Fed_MBPG.py --global-iteration 150 --num-agent 2 --env HalfCheetah --beta 1.0 > Fed_MBPG_HalfCheetah_1p0_gi150_a2.out 2> Fed_MBPG_HalfCheetah_1p0_gi150_a2.err &
+pid4=$!
+
+# 休息2小时
+sleep 7200
+
+nohup python Fed_MBPG.py --global-iteration 150 --env Walker --beta 1.0 --num-agent 2 > Fed_MBPG_Walker_1p0_gi150_a2.out 2> Fed_MBPG_Walker_1p0_gi150_a2.err &
+pid5=$!
+
+# 休息18小时
+sleep 64800
+
+nohup python Fed_MBPG.py --global-iteration 150 --env Walker --beta 0.2 --num-agent 2 > Fed_MBPG_Walker_0p2_gi150_a2.out 2> Fed_MBPG_Walker_0p2_gi150_a2.err &
+pid6=$!
+
+# 休息18小时
+sleep 64800
+
+nohup python Fed_MBPG.py --global-iteration 150 --env Walker --beta 0.5 --num-agent 2 > Fed_MBPG_Walker_0p5_gi150_a2.out 2> Fed_MBPG_Walker_0p5_gi150_a2.err &
+pid7=$!
+
+
+# 打印进程ID
+echo "PID of the first command: $pid1"
+echo "PID of the second command: $pid2"
+echo "PID of the third command: $pid3"
+echo "PID of the fourth command: $pid4"
+echo "PID of the first command: $pid5"
+echo "PID of the second command: $pid6"
+echo "PID of the third command: $pid7"
+
+# 等待所有命令完成
+wait $pid1
+wait $pid2
+wait $pid3
+wait $pid4
+wait $pid5
+wait $pid6
+wait $pid7
+
+echo "All commands have finished."

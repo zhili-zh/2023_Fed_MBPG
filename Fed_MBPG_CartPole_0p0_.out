@@ -1,0 +1,1003 @@
+num_policies: 3
+num_global_iterations: 5
+num_local_iterations: 10
+global_lr: 0.6
+local_lr: 0.75
+coef: 0.026666666666666665
+beta: 0.0
+begin to train policies of iteration  0
+begin to train policy  0
+2023-10-09 18:24:42 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:42 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5006 average return:  26.913978494623656
+186
+186
+tensor(1.)
+2023-10-09 18:24:43 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:43 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5006...
+Warning: No valid output stream.
+timesteps: 10020 average return:  31.734177215189874
+158
+158
+tensor(1.2000)
+2023-10-09 18:24:43 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:43 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10020...
+Warning: No valid output stream.
+timesteps: 15030 average return:  35.785714285714285
+140
+140
+tensor(1.2000)
+2023-10-09 18:24:44 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:44 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15030...
+Warning: No valid output stream.
+timesteps: 20042 average return:  46.8411214953271
+107
+107
+tensor(1.2000)
+2023-10-09 18:24:44 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:44 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20042...
+Warning: No valid output stream.
+timesteps: 25100 average return:  51.09090909090909
+99
+99
+tensor(1.2000)
+2023-10-09 18:24:44 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:44 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25100...
+Warning: No valid output stream.
+timesteps: 30113 average return:  52.76842105263158
+95
+95
+tensor(1.2000)
+2023-10-09 18:24:45 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:45 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30113...
+Warning: No valid output stream.
+timesteps: 35142 average return:  55.26373626373626
+91
+91
+tensor(1.2000)
+2023-10-09 18:24:45 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:45 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35142...
+Warning: No valid output stream.
+timesteps: 40202 average return:  63.25
+80
+80
+tensor(1.2000)
+2023-10-09 18:24:45 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:45 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40202...
+Warning: No valid output stream.
+timesteps: 45210 average return:  61.82716049382716
+81
+81
+tensor(1.2000)
+finish trainning policy  0
+计算差值，并累加到总差值中
+begin to train policy  1
+2023-10-09 18:24:46 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:46 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5000 average return:  26.595744680851062
+188
+188
+tensor(1.)
+2023-10-09 18:24:46 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:46 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5000...
+Warning: No valid output stream.
+timesteps: 10006 average return:  30.33939393939394
+165
+165
+tensor(1.2000)
+2023-10-09 18:24:47 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:47 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10006...
+Warning: No valid output stream.
+timesteps: 15014 average return:  34.77777777777778
+144
+144
+tensor(1.2000)
+2023-10-09 18:24:47 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:47 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15014...
+Warning: No valid output stream.
+timesteps: 20065 average return:  41.743801652892564
+121
+121
+tensor(1.2000)
+2023-10-09 18:24:47 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:47 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20065...
+Warning: No valid output stream.
+timesteps: 25065 average return:  47.16981132075472
+106
+106
+tensor(1.2000)
+2023-10-09 18:24:48 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:48 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25065...
+Warning: No valid output stream.
+timesteps: 30070 average return:  50.55555555555556
+99
+99
+tensor(1.2000)
+2023-10-09 18:24:48 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:48 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30070...
+Warning: No valid output stream.
+timesteps: 35097 average return:  60.566265060240966
+83
+83
+tensor(1.2000)
+2023-10-09 18:24:48 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:48 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35097...
+Warning: No valid output stream.
+timesteps: 40097 average return:  58.13953488372093
+86
+86
+tensor(1.2000)
+2023-10-09 18:24:49 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:49 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40097...
+Warning: No valid output stream.
+timesteps: 45141 average return:  62.27160493827161
+81
+81
+tensor(1.2000)
+finish trainning policy  1
+计算差值，并累加到总差值中
+begin to train policy  2
+2023-10-09 18:24:49 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:49 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5004 average return:  27.048648648648648
+185
+185
+tensor(1.)
+2023-10-09 18:24:50 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:50 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5004...
+Warning: No valid output stream.
+timesteps: 10024 average return:  28.361581920903955
+177
+177
+tensor(1.2000)
+2023-10-09 18:24:50 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:50 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10024...
+Warning: No valid output stream.
+timesteps: 15102 average return:  34.78082191780822
+146
+146
+tensor(1.2000)
+2023-10-09 18:24:50 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:50 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15102...
+Warning: No valid output stream.
+timesteps: 20195 average return:  38.007462686567166
+134
+134
+tensor(1.2000)
+2023-10-09 18:24:51 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:51 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20195...
+Warning: No valid output stream.
+timesteps: 25237 average return:  50.42
+100
+100
+tensor(1.2000)
+2023-10-09 18:24:51 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:51 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25237...
+Warning: No valid output stream.
+timesteps: 30296 average return:  52.154639175257735
+97
+97
+tensor(1.2000)
+2023-10-09 18:24:52 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:52 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30296...
+Warning: No valid output stream.
+timesteps: 35332 average return:  57.88505747126437
+87
+87
+tensor(1.2000)
+2023-10-09 18:24:52 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:52 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35332...
+Warning: No valid output stream.
+timesteps: 40400 average return:  64.15189873417721
+79
+79
+tensor(1.2000)
+2023-10-09 18:24:52 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:52 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40400...
+Warning: No valid output stream.
+timesteps: 45481 average return:  71.56338028169014
+71
+71
+tensor(1.2000)
+finish trainning policy  2
+计算差值，并累加到总差值中
+begin to train policies of iteration  1
+begin to train policy  0
+2023-10-09 18:24:53 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:53 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5014 average return:  26.52910052910053
+189
+189
+tensor(1.)
+2023-10-09 18:24:53 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:53 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5014...
+Warning: No valid output stream.
+timesteps: 10052 average return:  33.14473684210526
+152
+152
+tensor(1.2000)
+2023-10-09 18:24:53 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:53 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10052...
+Warning: No valid output stream.
+timesteps: 15073 average return:  35.60992907801418
+141
+141
+tensor(1.2000)
+2023-10-09 18:24:54 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:54 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15073...
+Warning: No valid output stream.
+timesteps: 20164 average return:  43.51282051282051
+117
+117
+tensor(1.2000)
+2023-10-09 18:24:54 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:54 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20164...
+Warning: No valid output stream.
+timesteps: 25200 average return:  47.96190476190476
+105
+105
+tensor(1.2000)
+2023-10-09 18:24:55 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:55 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25200...
+Warning: No valid output stream.
+timesteps: 30223 average return:  47.838095238095235
+105
+105
+tensor(1.2000)
+2023-10-09 18:24:55 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:55 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30223...
+Warning: No valid output stream.
+timesteps: 35238 average return:  56.98863636363637
+88
+88
+tensor(1.2000)
+2023-10-09 18:24:55 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:55 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35238...
+Warning: No valid output stream.
+timesteps: 40254 average return:  63.49367088607595
+79
+79
+tensor(1.2000)
+2023-10-09 18:24:56 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:56 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40254...
+Warning: No valid output stream.
+timesteps: 45277 average return:  66.97333333333333
+75
+75
+tensor(1.2000)
+finish trainning policy  0
+计算差值，并累加到总差值中
+begin to train policy  1
+2023-10-09 18:24:56 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:56 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5022 average return:  28.213483146067414
+178
+178
+tensor(1.)
+2023-10-09 18:24:56 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:56 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5022...
+Warning: No valid output stream.
+timesteps: 10069 average return:  30.96319018404908
+163
+163
+tensor(1.2000)
+2023-10-09 18:24:57 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:57 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10069...
+Warning: No valid output stream.
+timesteps: 15086 average return:  34.363013698630134
+146
+146
+tensor(1.2000)
+2023-10-09 18:24:57 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:57 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15086...
+Warning: No valid output stream.
+timesteps: 20110 average return:  40.84552845528455
+123
+123
+tensor(1.2000)
+2023-10-09 18:24:58 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:58 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20110...
+Warning: No valid output stream.
+timesteps: 25156 average return:  44.26315789473684
+114
+114
+tensor(1.2000)
+2023-10-09 18:24:58 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:58 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25156...
+Warning: No valid output stream.
+timesteps: 30171 average return:  53.351063829787236
+94
+94
+tensor(1.2000)
+2023-10-09 18:24:58 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:58 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30171...
+Warning: No valid output stream.
+timesteps: 35173 average return:  54.369565217391305
+92
+92
+tensor(1.2000)
+2023-10-09 18:24:59 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:59 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35173...
+Warning: No valid output stream.
+timesteps: 40263 average return:  61.325301204819276
+83
+83
+tensor(1.2000)
+2023-10-09 18:24:59 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:24:59 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40263...
+Warning: No valid output stream.
+timesteps: 45326 average return:  64.0886075949367
+79
+79
+tensor(1.2000)
+finish trainning policy  1
+计算差值，并累加到总差值中
+begin to train policy  2
+2023-10-09 18:25:00 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:00 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5006 average return:  27.65745856353591
+181
+181
+tensor(1.)
+2023-10-09 18:25:00 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:00 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5006...
+Warning: No valid output stream.
+timesteps: 10018 average return:  34.32876712328767
+146
+146
+tensor(1.2000)
+2023-10-09 18:25:00 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:00 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10018...
+Warning: No valid output stream.
+timesteps: 15039 average return:  36.38405797101449
+138
+138
+tensor(1.2000)
+2023-10-09 18:25:01 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:01 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15039...
+Warning: No valid output stream.
+timesteps: 20056 average return:  37.721804511278194
+133
+133
+tensor(1.2000)
+2023-10-09 18:25:01 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:01 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20056...
+Warning: No valid output stream.
+timesteps: 25103 average return:  43.136752136752136
+117
+117
+tensor(1.2000)
+2023-10-09 18:25:02 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:02 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25103...
+Warning: No valid output stream.
+timesteps: 30240 average return:  51.37
+100
+100
+tensor(1.2000)
+2023-10-09 18:25:02 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:02 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30240...
+Warning: No valid output stream.
+timesteps: 35302 average return:  55.02173913043478
+92
+92
+tensor(1.2000)
+2023-10-09 18:25:02 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:02 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35302...
+Warning: No valid output stream.
+timesteps: 40317 average return:  59.70238095238095
+84
+84
+tensor(1.2000)
+2023-10-09 18:25:03 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:03 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40317...
+Warning: No valid output stream.
+timesteps: 45345 average return:  61.31707317073171
+82
+82
+tensor(1.2000)
+finish trainning policy  2
+计算差值，并累加到总差值中
+begin to train policies of iteration  2
+begin to train policy  0
+2023-10-09 18:25:03 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:03 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5009 average return:  26.502645502645503
+189
+189
+tensor(1.)
+2023-10-09 18:25:03 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:03 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5009...
+Warning: No valid output stream.
+timesteps: 10013 average return:  32.921052631578945
+152
+152
+tensor(1.2000)
+2023-10-09 18:25:04 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:04 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10013...
+Warning: No valid output stream.
+timesteps: 15026 average return:  35.80714285714286
+140
+140
+tensor(1.2000)
+2023-10-09 18:25:04 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:04 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15026...
+Warning: No valid output stream.
+timesteps: 20037 average return:  37.3955223880597
+134
+134
+tensor(1.2000)
+2023-10-09 18:25:05 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:05 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20037...
+Warning: No valid output stream.
+timesteps: 25058 average return:  45.234234234234236
+111
+111
+tensor(1.2000)
+2023-10-09 18:25:05 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:05 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25058...
+Warning: No valid output stream.
+timesteps: 30090 average return:  45.333333333333336
+111
+111
+tensor(1.2000)
+2023-10-09 18:25:05 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:05 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30090...
+Warning: No valid output stream.
+timesteps: 35120 average return:  54.086021505376344
+93
+93
+tensor(1.2000)
+2023-10-09 18:25:06 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:06 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35120...
+Warning: No valid output stream.
+timesteps: 40167 average return:  65.54545454545455
+77
+77
+tensor(1.2000)
+2023-10-09 18:25:06 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:06 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40167...
+Warning: No valid output stream.
+timesteps: 45219 average return:  65.6103896103896
+77
+77
+tensor(1.2000)
+finish trainning policy  0
+计算差值，并累加到总差值中
+begin to train policy  1
+2023-10-09 18:25:07 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:07 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5030 average return:  28.100558659217878
+179
+179
+tensor(1.)
+2023-10-09 18:25:07 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:07 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5030...
+Warning: No valid output stream.
+timesteps: 10067 average return:  31.285714285714285
+161
+161
+tensor(1.2000)
+2023-10-09 18:25:07 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:07 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10067...
+Warning: No valid output stream.
+timesteps: 15067 average return:  36.76470588235294
+136
+136
+tensor(1.2000)
+2023-10-09 18:25:08 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:08 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15067...
+Warning: No valid output stream.
+timesteps: 20070 average return:  48.10576923076923
+104
+104
+tensor(1.2000)
+2023-10-09 18:25:08 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:08 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20070...
+Warning: No valid output stream.
+timesteps: 25145 average return:  46.559633027522935
+109
+109
+tensor(1.2000)
+2023-10-09 18:25:08 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:08 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25145...
+Warning: No valid output stream.
+timesteps: 30177 average return:  56.53932584269663
+89
+89
+tensor(1.2000)
+2023-10-09 18:25:09 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:09 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30177...
+Warning: No valid output stream.
+timesteps: 35188 average return:  57.59770114942529
+87
+87
+tensor(1.2000)
+2023-10-09 18:25:09 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:09 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35188...
+Warning: No valid output stream.
+timesteps: 40228 average return:  62.22222222222222
+81
+81
+tensor(1.2000)
+2023-10-09 18:25:10 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:10 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40228...
+Warning: No valid output stream.
+timesteps: 45245 average return:  66.01315789473684
+76
+76
+tensor(1.2000)
+finish trainning policy  1
+计算差值，并累加到总差值中
+begin to train policy  2
+2023-10-09 18:25:10 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:10 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5056 average return:  27.78021978021978
+182
+182
+tensor(1.)
+2023-10-09 18:25:10 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:10 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5056...
+Warning: No valid output stream.
+timesteps: 10056 average return:  32.25806451612903
+155
+155
+tensor(1.2000)
+2023-10-09 18:25:11 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:11 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10056...
+Warning: No valid output stream.
+timesteps: 15108 average return:  33.45695364238411
+151
+151
+tensor(1.2000)
+2023-10-09 18:25:11 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:11 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15108...
+Warning: No valid output stream.
+timesteps: 20131 average return:  42.21008403361345
+119
+119
+tensor(1.2000)
+2023-10-09 18:25:12 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:12 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20131...
+Warning: No valid output stream.
+timesteps: 25150 average return:  44.8125
+112
+112
+tensor(1.2000)
+2023-10-09 18:25:12 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:12 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25150...
+Warning: No valid output stream.
+timesteps: 30172 average return:  52.3125
+96
+96
+tensor(1.2000)
+2023-10-09 18:25:12 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:12 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30172...
+Warning: No valid output stream.
+timesteps: 35226 average return:  59.45882352941177
+85
+85
+tensor(1.2000)
+2023-10-09 18:25:13 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:13 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35226...
+Warning: No valid output stream.
+timesteps: 40260 average return:  60.65060240963855
+83
+83
+tensor(1.2000)
+2023-10-09 18:25:13 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:13 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40260...
+Warning: No valid output stream.
+timesteps: 45303 average return:  67.24
+75
+75
+tensor(1.2000)
+finish trainning policy  2
+计算差值，并累加到总差值中
+begin to train policies of iteration  3
+begin to train policy  0
+2023-10-09 18:25:13 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:13 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5036 average return:  26.229166666666668
+192
+192
+tensor(1.)
+2023-10-09 18:25:14 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:14 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5036...
+Warning: No valid output stream.
+timesteps: 10062 average return:  29.7396449704142
+169
+169
+tensor(1.2000)
+2023-10-09 18:25:14 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:14 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10062...
+Warning: No valid output stream.
+timesteps: 15064 average return:  37.32835820895522
+134
+134
+tensor(1.2000)
+2023-10-09 18:25:15 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:15 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15064...
+Warning: No valid output stream.
+timesteps: 20064 average return:  41.32231404958678
+121
+121
+tensor(1.2000)
+2023-10-09 18:25:15 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:15 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20064...
+Warning: No valid output stream.
+timesteps: 25083 average return:  51.214285714285715
+98
+98
+tensor(1.2000)
+2023-10-09 18:25:15 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:15 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25083...
+Warning: No valid output stream.
+timesteps: 30111 average return:  48.34615384615385
+104
+104
+tensor(1.2000)
+2023-10-09 18:25:16 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:16 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30111...
+Warning: No valid output stream.
+timesteps: 35160 average return:  59.4
+85
+85
+tensor(1.2000)
+2023-10-09 18:25:16 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:16 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35160...
+Warning: No valid output stream.
+timesteps: 40184 average return:  62.02469135802469
+81
+81
+tensor(1.2000)
+2023-10-09 18:25:16 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:16 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40184...
+Warning: No valid output stream.
+timesteps: 45233 average return:  64.73076923076923
+78
+78
+tensor(1.2000)
+finish trainning policy  0
+计算差值，并累加到总差值中
+begin to train policy  1
+2023-10-09 18:25:17 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:17 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5033 average return:  27.653846153846153
+182
+182
+tensor(1.)
+2023-10-09 18:25:17 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:17 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5033...
+Warning: No valid output stream.
+timesteps: 10058 average return:  29.733727810650887
+169
+169
+tensor(1.2000)
+2023-10-09 18:25:18 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:18 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10058...
+Warning: No valid output stream.
+timesteps: 15091 average return:  34.951388888888886
+144
+144
+tensor(1.2000)
+2023-10-09 18:25:18 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:18 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15091...
+Warning: No valid output stream.
+timesteps: 20098 average return:  37.93181818181818
+132
+132
+tensor(1.2000)
+2023-10-09 18:25:18 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:18 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20098...
+Warning: No valid output stream.
+timesteps: 25165 average return:  45.24107142857143
+112
+112
+tensor(1.2000)
+2023-10-09 18:25:19 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:19 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25165...
+Warning: No valid output stream.
+timesteps: 30234 average return:  55.7032967032967
+91
+91
+tensor(1.2000)
+2023-10-09 18:25:19 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:19 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30234...
+Warning: No valid output stream.
+timesteps: 35285 average return:  57.39772727272727
+88
+88
+tensor(1.2000)
+2023-10-09 18:25:19 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:19 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35285...
+Warning: No valid output stream.
+timesteps: 40299 average return:  62.675
+80
+80
+tensor(1.2000)
+2023-10-09 18:25:20 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:20 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40299...
+Warning: No valid output stream.
+timesteps: 45307 average return:  64.2051282051282
+78
+78
+tensor(1.2000)
+finish trainning policy  1
+计算差值，并累加到总差值中
+begin to train policy  2
+2023-10-09 18:25:20 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:20 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5055 average return:  28.39887640449438
+178
+178
+tensor(1.)
+2023-10-09 18:25:21 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:21 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5055...
+Warning: No valid output stream.
+timesteps: 10076 average return:  31.980891719745223
+157
+157
+tensor(1.2000)
+2023-10-09 18:25:21 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:21 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10076...
+Warning: No valid output stream.
+timesteps: 15095 average return:  36.369565217391305
+138
+138
+tensor(1.2000)
+2023-10-09 18:25:21 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:21 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15095...
+Warning: No valid output stream.
+timesteps: 20121 average return:  43.327586206896555
+116
+116
+tensor(1.2000)
+2023-10-09 18:25:22 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:22 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20121...
+Warning: No valid output stream.
+timesteps: 25131 average return:  49.603960396039604
+101
+101
+tensor(1.2000)
+2023-10-09 18:25:22 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:22 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25131...
+Warning: No valid output stream.
+timesteps: 30151 average return:  51.75257731958763
+97
+97
+tensor(1.2000)
+2023-10-09 18:25:23 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:23 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30151...
+Warning: No valid output stream.
+timesteps: 35176 average return:  59.82142857142857
+84
+84
+tensor(1.2000)
+2023-10-09 18:25:23 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:23 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35176...
+Warning: No valid output stream.
+timesteps: 40250 average return:  64.22784810126582
+79
+79
+tensor(1.2000)
+2023-10-09 18:25:23 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:23 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40250...
+Warning: No valid output stream.
+timesteps: 45259 average return:  65.90789473684211
+76
+76
+tensor(1.2000)
+finish trainning policy  2
+计算差值，并累加到总差值中
+begin to train policies of iteration  4
+begin to train policy  0
+2023-10-09 18:25:24 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:24 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5019 average return:  28.844827586206897
+174
+174
+tensor(1.)
+2023-10-09 18:25:24 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:24 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5019...
+Warning: No valid output stream.
+timesteps: 10068 average return:  34.11486486486486
+148
+148
+tensor(1.2000)
+2023-10-09 18:25:24 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:24 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10068...
+Warning: No valid output stream.
+timesteps: 15096 average return:  32.64935064935065
+154
+154
+tensor(1.2000)
+2023-10-09 18:25:25 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:25 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15096...
+Warning: No valid output stream.
+timesteps: 20129 average return:  42.294117647058826
+119
+119
+tensor(1.2000)
+2023-10-09 18:25:25 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:25 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20129...
+Warning: No valid output stream.
+timesteps: 25224 average return:  46.74311926605505
+109
+109
+tensor(1.2000)
+2023-10-09 18:25:26 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:26 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25224...
+Warning: No valid output stream.
+timesteps: 30252 average return:  52.375
+96
+96
+tensor(1.2000)
+2023-10-09 18:25:26 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:26 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30252...
+Warning: No valid output stream.
+timesteps: 35274 average return:  48.28846153846154
+104
+104
+tensor(1.2000)
+2023-10-09 18:25:26 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:26 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35274...
+Warning: No valid output stream.
+timesteps: 40341 average return:  55.68131868131868
+91
+91
+tensor(1.2000)
+2023-10-09 18:25:27 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:27 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40341...
+Warning: No valid output stream.
+timesteps: 45367 average return:  66.13157894736842
+76
+76
+tensor(1.2000)
+finish trainning policy  0
+计算差值，并累加到总差值中
+begin to train policy  1
+2023-10-09 18:25:27 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:27 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5022 average return:  27.9
+180
+180
+tensor(1.)
+2023-10-09 18:25:28 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:28 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5022...
+Warning: No valid output stream.
+timesteps: 10047 average return:  32.00636942675159
+157
+157
+tensor(1.2000)
+2023-10-09 18:25:28 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:28 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10047...
+Warning: No valid output stream.
+timesteps: 15060 average return:  34.33561643835616
+146
+146
+tensor(1.2000)
+2023-10-09 18:25:28 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:28 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15060...
+Warning: No valid output stream.
+timesteps: 20074 average return:  43.98245614035088
+114
+114
+tensor(1.2000)
+2023-10-09 18:25:29 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:29 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20074...
+Warning: No valid output stream.
+timesteps: 25167 average return:  47.598130841121495
+107
+107
+tensor(1.2000)
+2023-10-09 18:25:29 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:29 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25167...
+Warning: No valid output stream.
+timesteps: 30197 average return:  52.395833333333336
+96
+96
+tensor(1.2000)
+2023-10-09 18:25:29 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:29 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30197...
+Warning: No valid output stream.
+timesteps: 35241 average return:  59.34117647058824
+85
+85
+tensor(1.2000)
+2023-10-09 18:25:30 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:30 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35241...
+Warning: No valid output stream.
+timesteps: 40302 average return:  60.975903614457835
+83
+83
+tensor(1.2000)
+2023-10-09 18:25:30 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:30 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40302...
+Warning: No valid output stream.
+timesteps: 45349 average return:  60.083333333333336
+84
+84
+tensor(1.2000)
+finish trainning policy  1
+计算差值，并累加到总差值中
+begin to train policy  2
+2023-10-09 18:25:31 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:31 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 0...
+Warning: No valid output stream.
+timesteps: 5010 average return:  29.29824561403509
+171
+171
+tensor(1.)
+2023-10-09 18:25:31 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:31 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 5010...
+Warning: No valid output stream.
+timesteps: 10010 average return:  31.055900621118013
+161
+161
+tensor(1.2000)
+2023-10-09 18:25:31 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:31 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 10010...
+Warning: No valid output stream.
+timesteps: 15034 average return:  34.17687074829932
+147
+147
+tensor(1.2000)
+2023-10-09 18:25:32 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:32 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 15034...
+Warning: No valid output stream.
+timesteps: 20061 average return:  39.8968253968254
+126
+126
+tensor(1.2000)
+2023-10-09 18:25:32 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:32 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 20061...
+Warning: No valid output stream.
+timesteps: 25078 average return:  47.33018867924528
+106
+106
+tensor(1.2000)
+2023-10-09 18:25:33 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:33 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 25078...
+Warning: No valid output stream.
+timesteps: 30137 average return:  46.842592592592595
+108
+108
+tensor(1.2000)
+2023-10-09 18:25:33 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:33 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 30137...
+Warning: No valid output stream.
+timesteps: 35142 average return:  58.19767441860465
+86
+86
+tensor(1.2000)
+2023-10-09 18:25:33 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:33 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 35142...
+Warning: No valid output stream.
+timesteps: 40151 average return:  58.24418604651163
+86
+86
+tensor(1.2000)
+2023-10-09 18:25:34 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples...
+2023-10-09 18:25:34 | [experiment_2023_10_09_18_24_36_0001] Obtaining samples for iteration 40151...
+Warning: No valid output stream.
+timesteps: 45249 average return:  66.20779220779221
+77
+77
+tensor(1.2000)
+finish trainning policy  2
+计算差值，并累加到总差值中
+python -m garage.experiment.experiment_wrapper  --snapshot_mode 'last'  --seed '1'  --exp_name 'experiment_2023_10_09_18_24_36_0001'  --log_dir '/home/sih19006/2023fedRL/2023_Fed_MBPG/data/local/experiment/experiment_2023_10_09_18_24_36_0001'  --args_data 'gASVjREAAAAAAACMF2Nsb3VkcGlja2xlLmNsb3VkcGlja2xllIwOX21ha2VfZnVuY3Rpb26Uk5QoaACMDV9idWlsdGluX3R5cGWUk5SMCENvZGVUeXBllIWUUpQoSwFLAEsiSxZLB0K+AwAAZAF9AmQCfQN0AGoBfQR0AGoCZANrAnJadAN0BHQFgwCDAYMBfQV0BnwAgwF9BmQEfQdkBX0IZAZ9CWQDfQpkBX0LZAd9AmQIfQxkCX0NZAl9DmQKfQ9kC30QdABqAmQMawJypnQDdAR0B4MAgwGDAX0FdAZ8AIMBfQZkDX0HZA59CGQHfQJkD30JZAh9DGQQfQ5kEX0NZBJ9C2QTfQ9kFH0KZBV9EHQAagJkFmsCcvZ0A3QEdAiDAIMBgwF9BXQGfACDAX0GZA19B2QXfQhkGH0CZA99CWQIfQxkCX0OZBl9DWQSfQtkGn0DZBN9D2QWfQpkG30QdABqAmQcawKQAXJIdAN0BHQJgwCDAYMBfQV0BnwAgwF9BmQdfQdkDn0IZA99CWQefQxkGX0OZB99DWQSfQtkB30CZCB9A2QTfQ9kHH0KZCF9EHQAagp9EXQAagt9EnQAagx9E2QefRR8DH0VfBR8FXwRFAB8ExQAGwCJAHQAag19FnQOZCJ0AGoKgwIBAHQOZCN0AGoLgwIBAHQOZCR0AGoMgwIBAHQOZCVkHoMCAQB0DmQmfAyDAgEAdA5kJ2QefAx0AGoKFAB0AGoMFAAbAIMCAQB0DmQodABqDYMCAQB0AGoCZANrApABcvx0D3wFahBkKWQpZwJ0EWoSZCpkK40EiQFuGHQTfAVqEGQsZCxnAnQRahJkKmQrjQSJAZABeJp0FHwSgwFEAJABXYx9F3QOZC18F4MCAQCHAWYBZC5kL4QIdBR8EYMBRACDAX0YiAFqFYMAiQJkMGQxhACIAmoWgwBEAIMBiQNkMmQxhACIAmoWgwBEAIMBfRlkM30aeOp8GEQAXeJ9G3QOZDR8GoMCAQB0F3wFahBkNY0BfRx0GHwFahB8BXwKfBt8HHwIfA98C3wMfA18DnwHfBMUAHwCfAdkNnwDfAR8FmQ3jRJ9HXwGahl8HXwFgwIBAHwGahpkBXwHZDiNAgEAdA5kOXwagwIBAHQOZDqDAQEAeDKIAkQAXSp9HnwbahWDAHweGQCIAnweGQAYAH0fiAN8HgUA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BGNvZWaUjBJpbml0X3BvbGljeV9wYXJhbXOUjBF0b3RhbF9kaWZmX3BhcmFtc5SHlCl0lFKUjANZZXOUdJQojARhcmdzlIwMSVNfTUJQR19zdGFylGhDjAVUZkVudpSMCW5vcm1hbGl6ZZSMC0NhcnRQb2xlRW52lIwLTG9jYWxSdW5uZXKUjAtXYWxrZXIyZEVudpSMCUhvcHBlckVudpSMDkhhbGZDaGVldGFoRW52lIwJbnVtX2FnZW50lIwQZ2xvYmFsX2l0ZXJhdGlvbpSMD2xvY2FsX2l0ZXJhdGlvbpRoU4wFcHJpbnSUjBRDYXRlZ29yaWNhbE1MUFBvbGljeZSMBHNwZWOUaC+MBHRhbmiUjBFHYXVzc2lhbk1MUFBvbGljeZSMBXJhbmdllIwKc3RhdGVfZGljdJSMBWl0ZW1zlIwVTGluZWFyRmVhdHVyZUJhc2VsaW5llIwHTUJQR19JTZSMBXNldHVwlIwFdHJhaW6UjApzaW1wbGVfYXZnlIwPbG9hZF9zdGF0ZV9kaWN0lHSUKIwPc25hcHNob3RfY29uZmlnlGgkaE5oUWhSaEOMBnJ1bm5lcpRoT4wKbWF4X2xlbmd0aJRoTYwEbmFtZZRoSYwCbHKUaEtoTGhIjARwYXRolIwMbnVtX3BvbGljaWVzlIwVbnVtX2dsb2JhbF9pdGVyYXRpb25zlIwUbnVtX2xvY2FsX2l0ZXJhdGlvbnOUjAlnbG9iYWxfbHKUjAhsb2NhbF9scpRoU4wJaXRlcmF0aW9ulIwIcG9saWNpZXOUjBB0b3RhbF9hdmdfcGFyYW1zlIwFaW5kZXiUaEVoRowEYWxnb5SMA2tleZSMBGRpZmaUjA51cGRhdGVkX3BhcmFtc5SMDGZpbmFsX3BvbGljeZR0lGgmjAhydW5fdGFza5RLHEICAQAAAAoEAQQBBgEKAw4BCAEEAQQBBAEEAgQBBAcEAQQBBAYEAQQCCgIOAQgBBAEEAgQCBAEEAQQBBAEEBQQCBAEEAgoCDgEIAgQCBAEEAQQBBAEEAQQBBAEEAQQCBAEEAgwBDgEIAQQCBAIEAQQBBAEEAQQBBAEEAgQCBAEEAgYBBgEGAQQBBAEQAQYCDAEMAQwBCgEKARoBDAQMAQYBBgEEAQoCBgEGAQQBCAMSAQoDFgEIARIBEgMEAQoBCgEMAQYBAgECAQIBAgECAQIBAgECAQIBAgEGAgIBAgECAQICAgEIAgwBDgEKAwgBCgEUARYDCgEiAg4DDAEIARYBCgIMARAElCkoaF5oKWhfaGB0lHSUUpR9lCiMC19fcGFja2FnZV9flE6MCF9fbmFtZV9flIwIX19tYWluX1+UjAhfX2ZpbGVfX5SMC0ZlZF9NQlBHLnB5lHVOTk50lFKUjBxjbG91ZHBpY2tsZS5jbG91ZHBpY2tsZV9mYXN0lIwSX2Z1bmN0aW9uX3NldHN0YXRllJOUaKJ9lH2UKGidaJaMDF9fcXVhbG5hbWVfX5RolowPX19hbm5vdGF0aW9uc19flH2UjA5fX2t3ZGVmYXVsdHNfX5ROjAxfX2RlZmF1bHRzX1+UTowKX19tb2R1bGVfX5RonowHX19kb2NfX5RoCYwLX19jbG9zdXJlX1+UTowXX2Nsb3VkcGlja2xlX3N1Ym1vZHVsZXOUXZSMC19fZ2xvYmFsc19flH2UKGhmjAhhcmdwYXJzZZSMCU5hbWVzcGFjZZSTlCmBlH2UKGhDjAhDYXJ0UG9sZZRoZ4loU0cAAAAAAAAAAGhvSwNocEsFaHFLCmh+jANZZXOUdWJoaIwTZ2FyYWdlLnRmLmVudnMuYmFzZZRoaJOUaGmMGmdhcmFnZS5lbnZzLm5vcm1hbGl6ZWRfZW52lIwNTm9ybWFsaXplZEVudpSTlGhqjCFneW0uZW52cy5jbGFzc2ljX2NvbnRyb2wuY2FydHBvbGWUaGqTlGhrjB5nYXJhZ2UuZXhwZXJpbWVudC5sb2NhbF9ydW5uZXKUaGuTlGhsjBhneW0uZW52cy5tdWpvY28ud2Fsa2VyMmSUaGyTlGhtjBZneW0uZW52cy5tdWpvY28uaG9wcGVylGhtk5RobowcZ3ltLmVudnMubXVqb2NvLmhhbGZfY2hlZXRhaJRobpOUaHOMG1BvbGljeS5DYXRlZ29yaWNhbE1MUFBvbGljeZRoc5OUaC9oAIwJc3ViaW1wb3J0lJOUaC+FlFKUaHaMGFBvbGljeS5HYXVzc2lhbk1MUFBvbGljeZRodpOUaHqMK2dhcmFnZS5ucC5iYXNlbGluZXMubGluZWFyX2ZlYXR1cmVfYmFzZWxpbmWUaHqTlGh7jA9BbGdvcml0aG1zLk1CUEeUaHuTlGggaM1oIIWUUpR1dYaUhlIwLg=='  --variant_data 'gAN9cQBYCAAAAGV4cF9uYW1lcQFYIwAAAGV4cGVyaW1lbnRfMjAyM18xMF8wOV8xOF8yNF8zNl8wMDAxcQJzLg=='
