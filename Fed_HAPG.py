@@ -142,8 +142,10 @@ def run_task(snapshot_config, *_):
     num_policies = args.num_agent
     num_global_iterations = args.global_iteration
     num_local_iterations = args.local_iteration
-    global_lr = 0.6
-    local_lr = lr
+
+    # lr from [0.005，0.01，0.05，0.1，0.5]
+    local_lr = 0.05
+    global_lr = local_lr * num_local_iterations
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
 
@@ -152,8 +154,9 @@ def run_task(snapshot_config, *_):
     print("num_local_iterations:", args.local_iteration)
     # print("simple_avg:", args.simple_avg)
     print("sample_noise_list:", sample_noise_list)
-    print("local_lr:", lr)
-    print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
+    print("local_lr:", local_lr)
+    print("global_lr:", global_lr)
+    print("coef:", coef)
     print("beta:", args.beta)
 
     if args.env == 'CartPole':
@@ -242,8 +245,10 @@ def run_task(snapshot_config, *_):
 # )
 # Emails.send_end_email(exp_name = args, arglist = args)
 
-run_experiment(
-    run_task,
-    snapshot_mode='last',
-    seed=1,
-)
+if __name__ == '__main__':
+    run_experiment(
+        run_task,
+        snapshot_mode='last',
+        log_dir='./temp_log/'
+        #seed=1,
+    )

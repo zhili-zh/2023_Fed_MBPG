@@ -1,4 +1,4 @@
-name: hsh_2023_py36
+name: frl
 channels:
   - defaults
 dependencies:

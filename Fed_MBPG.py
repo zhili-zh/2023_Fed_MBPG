@@ -256,8 +256,10 @@ def run_task(snapshot_config, *_):
 # )
 # Emails.send_end_email(exp_name = args, arglist = args)
 
-run_experiment(
-    run_task,
-    snapshot_mode='last',
-    seed=1,
-)
+if __name__ == '__main__':
+    run_experiment(
+        run_task,
+        snapshot_mode='last',
+        log_dir='./temp_log/'
+        #seed=1,
+    )
