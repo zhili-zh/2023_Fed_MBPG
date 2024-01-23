@@ -1,0 +1,48 @@
+C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\deterministic.py:29: UserWarning: Enabeling deterministic mode in PyTorch can have a performance impact when using GPU.
+  'Enabeling deterministic mode in PyTorch can have a performance '
+C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\sampler\parallel_sampler.py:101: LoggerWarning: [33mNo outputs have been added to the logger.[0m
+  logger.log('Setting seed to %d' % seed)
+C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\sampler\parallel_sampler.py:101: LoggerWarning: [33mLog data of type str was not accepted by any output[0m
+  logger.log('Setting seed to %d' % seed)
+Traceback (most recent call last):
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\experiment_wrapper.py", line 251, in <module>
+    run_experiment(sys.argv)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\experiment_wrapper.py", line 166, in run_experiment
+    args.resume_from_epoch)
+  File "Fed_HAPG.py", line 207, in run_task
+    _, new_policy = runner.train(n_epochs=100, batch_size=batch_size)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\local_runner.py", line 255, in train
+    return self.algo.train(self)
+  File "E:\codes\FRL\2023_Fed_MBPG\Algorithms\MBPG_HA.py", line 275, in train
+    paths = runner.obtain_samples(j)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\local_runner.py", line 127, in obtain_samples
+    itr, (batch_size or self.train_args.batch_size))
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\sampler\on_policy_vectorized_sampler.py", line 96, in obtain_samples
+    actions, agent_infos = policy.get_actions(obses)
+  File "E:\codes\FRL\2023_Fed_MBPG\Policy\GaussianMLPPolicy.py", line 127, in get_actions
+    dist = self.forward(observations)
+  File "E:\codes\FRL\2023_Fed_MBPG\Policy\GaussianMLPPolicy.py", line 93, in forward
+    return super().forward(torch.Tensor(inputs))
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\torch\modules\gaussian_mlp_module.py", line 135, in forward
+    mean, log_std_uncentered = self._get_mean_and_log_std(inputs)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\torch\modules\gaussian_mlp_module.py", line 208, in _get_mean_and_log_std
+    uncentered_log_std = torch.zeros(*broadcast_shape) + self._init_std
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "Fed_HAPG.py", line 252, in <module>
+    log_dir='./temp_log/'
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\experiment.py", line 264, in run_experiment
+    check=True)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\subprocess.py", line 490, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\subprocess.py", line 956, in communicate
+    self.wait()
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\subprocess.py", line 1019, in wait
+    return self._wait(timeout=timeout)
+  File "C:\Users\Zhili\anaconda3\envs\frl\lib\subprocess.py", line 1259, in _wait
+    timeout_millis)
+KeyboardInterrupt
