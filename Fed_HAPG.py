@@ -21,6 +21,7 @@ import numpy as np
 parser = argparse.ArgumentParser(description='FedHAPG-M for DRL in mujoco')
 parser.add_argument('--env', default='CartPole', type=str, help='choose environment from [CartPole, Walker, Hopper, HalfCheetah]')
 parser.add_argument('--beta', default=0.5, type=float, help='the value of Beta')
+parser.add_argument('--eta', default=0.05, type=float, help='local learning rate; global LR = eta * num_local_iterations')
 parser.add_argument('--num-agent', default=5, type=int, help='the numbers of agents/devices')
 parser.add_argument('--global-iteration', default=50, type=int, help='the numbers of global interations')
 parser.add_argument('--local-iteration', default=10, type=int, help='the numbers of local interations')
@@ -144,7 +145,7 @@ def run_task(snapshot_config, *_):
     num_local_iterations = args.local_iteration
 
     # lr from [0.005，0.01，0.05，0.1，0.5]
-    local_lr = 0.05
+    local_lr = args.eta
     global_lr = local_lr * num_local_iterations
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
