@@ -1,3 +1,4 @@
 
 .DS_Store
 ./outerr/old_files/*
+*.pyc
