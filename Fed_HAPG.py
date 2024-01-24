@@ -149,7 +149,7 @@ def run_task(snapshot_config, *_):
     global_lr = local_lr * num_local_iterations
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
-
+    
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
@@ -192,7 +192,7 @@ def run_task(snapshot_config, *_):
                     max_path_length=max_length,
                     discount=discount,
                     grad_factor=grad_factor,
-                    policy_lr= lr,
+                    policy_lr= local_lr,
                     c = c,
                     w = w,
                     th=th,
