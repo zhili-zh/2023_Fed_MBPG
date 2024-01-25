@@ -1,25 +1,25 @@
 #!/bin/bash
 
 # # finish eta = 0.050
-nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.0 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p0_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p0_gi150_a2_eta050.err  &
+# nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.0 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p0_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p0_gi150_a2_eta050.err &
 # pid0=$!
 
 # # 休息30mins
 # sleep 20
 
-nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.1 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p1_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p1_gi150_a2_eta050.err &
+# nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.1 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p1_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p1_gi150_a2_eta050.err &
 # pid1=$!
 
 # # # 休息30mins
 # sleep 20
 
-# nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.2 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p2_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p2_gi150_a2_eta050.err &
+nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.2 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p2_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p2_gi150_a2_eta050.err &
 # pid2=$!
 
 # # 休息30mins
 # sleep 20
 
-# nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.5 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p5_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p5_gi150_a2_eta050.err &
+nohup python -u Fed_HAPG.py --global-iteration 150 --env HalfCheetah --beta 0.5 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_HalfCheetah_0p5_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_HalfCheetah_0p5_gi150_a2_eta050.err &
 # pid3=$!
 
 # # 休息30mins
