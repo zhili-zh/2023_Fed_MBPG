@@ -223,6 +223,12 @@ def run_task(snapshot_config, *_):
             # print("使用初始策略的参数和总差值更新每个策略")
             updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
             init_policy.load_state_dict(updated_params)
+
+            sum_of_delta_norms = 0.
+            for k in total_diff_params:
+                sum_of_delta_norms += torch.norm(total_diff_params[k]).item()
+            print("## Iteration: {:d}, sum of delta norms: {}".format(iteration, sum_of_delta_norms))
+
         elif args.simple_avg == 'Yes':
             # print("使用初始策略的参数和策略的参数平均值更新每个策略")
             init_policy.load_state_dict(total_avg_params)
@@ -250,6 +256,6 @@ if __name__ == '__main__':
     run_experiment(
         run_task,
         snapshot_mode='last',
-        log_dir="temp_log/",
+        log_dir="temp_log",
         #seed=1,
     )

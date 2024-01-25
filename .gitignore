@@ -3,3 +3,4 @@
 ./outerr/old_files/*
 *.pyc
 temp_log/*
+figures/*

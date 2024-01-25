@@ -17,6 +17,7 @@ parser = argparse.ArgumentParser(description='FedSVRPG-M for DRL in mujoco')
 parser.add_argument('--env', default='CartPole', type=str, help='choose environment from [CartPole, Walker, Hopper, HalfCheetah]')
 parser.add_argument('--IS_MBPG_star', default=False, type=bool, help='whether to use IS-MBPG*')
 parser.add_argument('--beta', default=0.5, type=float, help='the value of Beta')
+parser.add_argument('--eta', default=0.05, type=float, help='local learning rate; global LR = eta * num_local_iterations')
 parser.add_argument('--num-agent', default=5, type=int, help='the numbers of agents/devices')
 parser.add_argument('--global-iteration', default=50, type=int, help='the numbers of global interations')
 parser.add_argument('--local-iteration', default=10, type=int, help='the numbers of local interations')
@@ -133,8 +134,10 @@ def run_task(snapshot_config, *_):
     num_policies = args.num_agent
     num_global_iterations = args.global_iteration
     num_local_iterations = args.local_iteration
-    global_lr = 0.6
-    local_lr = lr
+
+    # lr from [0.005，0.01，0.05，0.1，0.5]
+    local_lr = args.eta
+    global_lr = local_lr * num_local_iterations
     coef = global_lr / (local_lr * num_policies * num_local_iterations)
     beta = args.beta
 
@@ -142,9 +145,12 @@ def run_task(snapshot_config, *_):
     print("num_policies:", args.num_agent)
     print("num_global_iterations:", args.global_iteration)
     print("num_local_iterations:", args.local_iteration)
+    print("local_lr:", local_lr)
+    print("global_lr:", global_lr)
     print("simple_avg:", args.simple_avg)
-    print("local_lr:", lr)
+    #print("local_lr:", local_lr)
     # print("coef:", 0.6 / (lr * args.num_agent * args.local_iteration))
+    print("coef:", coef)
     print("beta:", args.beta)
 
 
@@ -191,7 +197,7 @@ def run_task(snapshot_config, *_):
                    max_path_length=max_length,
                    discount=discount,
                    grad_factor=grad_factor,
-                   policy_lr= lr,
+                   policy_lr= local_lr,
                    c = c,
                    w = w,
                    n_timestep=batch_size*num_local_iterations,
@@ -226,6 +232,12 @@ def run_task(snapshot_config, *_):
             # print("使用初始策略的参数和总差值更新每个策略")
             updated_params = {k: init_policy_params[k] + coef * total_diff_params[k] for k in init_policy_params}
             init_policy.load_state_dict(updated_params)
+
+            sum_of_delta_norms = 0.
+            for k in total_diff_params:
+                sum_of_delta_norms += torch.norm(total_diff_params[k]).item()
+            print("## Iteration: {:d}, sum of delta norms: {:.3f}".format(iteration, sum_of_delta_norms))
+
         elif args.simple_avg == 'Yes':
             # print("使用初始策略的参数和策略的参数平均值更新每个策略")
             init_policy.load_state_dict(total_avg_params)
@@ -260,6 +272,6 @@ if __name__ == '__main__':
     run_experiment(
         run_task,
         snapshot_mode='last',
-        log_dir='temp_log/'
+        log_dir="temp_log",
         #seed=1,
     )
