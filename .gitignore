@@ -2,5 +2,5 @@
 .DS_Store
 ./outerr/old_files/*
 *.pyc
-temp_log/*
+*temp_log*
 figures/*
