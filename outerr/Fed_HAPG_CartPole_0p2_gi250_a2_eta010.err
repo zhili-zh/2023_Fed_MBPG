@@ -1,0 +1,6 @@
+C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\experiment\deterministic.py:29: UserWarning: Enabeling deterministic mode in PyTorch can have a performance impact when using GPU.
+  'Enabeling deterministic mode in PyTorch can have a performance '
+C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\sampler\parallel_sampler.py:101: LoggerWarning: [33mNo outputs have been added to the logger.[0m
+  logger.log('Setting seed to %d' % seed)
+C:\Users\Zhili\anaconda3\envs\frl\lib\site-packages\garage\sampler\parallel_sampler.py:101: LoggerWarning: [33mLog data of type str was not accepted by any output[0m
+  logger.log('Setting seed to %d' % seed)

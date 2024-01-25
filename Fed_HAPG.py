@@ -227,6 +227,8 @@ def run_task(snapshot_config, *_):
             sum_of_delta_norms = 0.
             for k in total_diff_params:
                 sum_of_delta_norms += torch.norm(total_diff_params[k]).item()
+
+            sum_of_delta_norms = sum_of_delta_norms / (num_policies * num_local_iterations * local_lr)
             print("## Iteration: {:d}, sum of delta norms: {}".format(iteration, sum_of_delta_norms))
 
         elif args.simple_avg == 'Yes':
