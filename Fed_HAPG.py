@@ -250,6 +250,6 @@ if __name__ == '__main__':
     run_experiment(
         run_task,
         snapshot_mode='last',
-        log_dir='./temp_log/'
+        log_dir="temp_log/",
         #seed=1,
     )
