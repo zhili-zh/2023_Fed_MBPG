@@ -13,25 +13,25 @@
 # # # 休息30mins
 # sleep 20
 
-nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 0.2 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_0p2_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_0p2_gi150_a2_eta050.err &
+# nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 0.2 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_0p2_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_0p2_gi150_a2_eta050.err &
 # pid2=$!
 
 # # 休息30mins
 # sleep 20
 
-nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 0.5 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_0p5_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_0p5_gi150_a2_eta050.err &
+# nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 0.5 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_0p5_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_0p5_gi150_a2_eta050.err &
 # pid3=$!
 
 # # 休息30mins
 # sleep 20
 
-# nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 0.8 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_0p8_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_0p8_gi150_a2_eta050.err &
+nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 0.8 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_0p8_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_0p8_gi150_a2_eta050.err &
 # pid4=$!
 
 # # 休息30mins
 # sleep 20
 
-# nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 1.0 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_1p0_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_1p0_gi150_a2_eta050.err &
+nohup python -u Fed_HAPG.py --global-iteration 150 --env Hopper --beta 1.0 --num-agent 2 --eta 0.050 > ./outerr/Fed_HAPG_Hopper_1p0_gi150_a2_eta050.out 2> ./outerr/Fed_HAPG_Hopper_1p0_gi150_a2_eta050.err &
 # pid5=$!
 
 

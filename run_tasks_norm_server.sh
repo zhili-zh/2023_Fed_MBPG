@@ -7,19 +7,19 @@ pid0=$!
 # # 休息30mins
 sleep 20
 
-python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 10 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a10_eta050.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a10_eta050.err
+python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 2 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a2_eta050.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a2_eta050.err
 pid1=$!
 
 # # 休息30mins
 sleep 20
 
-python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 20 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a20_eta050.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a20_eta050.err
+python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 10 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a10_eta050.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a10_eta050.err
 pid2=$!
 
 # 休息30mins
 sleep 20
 
-python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 40 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a40_eta050.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a40_eta050.err
+python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 20 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a20_eta050.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a20_eta050.err
 pid3=$!
 
 
