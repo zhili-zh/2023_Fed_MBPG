@@ -171,6 +171,7 @@ def run_task(snapshot_config, *_):
         # print("begin to train policies of iteration ", iteration)
 
         # 初始化5个策略，它们一开始都与初始策略相同
+        # randomize initial parameter
         policies = [copy.deepcopy(init_policy) for _ in range(num_policies)]
         init_policy_params = init_policy.state_dict()
         total_diff_params = {k: torch.zeros_like(v) for k, v in init_policy_params.items()}
@@ -244,6 +245,7 @@ def run_task(snapshot_config, *_):
         elif args.simple_avg == 'Yes':
             # print("使用初始策略的参数和策略的参数平均值更新每个策略")
             init_policy.load_state_dict(total_avg_params)
+
         else:
             # print("不使用联邦学习")
             init_policy = copy.deepcopy(new_policy)
