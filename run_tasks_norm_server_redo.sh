@@ -6,6 +6,11 @@ pid0=$!
 nohup python -u Fed_HAPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 1 --eta 0.050 > ./outerr/Fed_HAPG_CartPole_0p8_gi250_a1_eta050_redo.out 2> ./outerr/Fed_HAPG_CartPole_0p8_gi250_a1_eta050_redo.err &
 pid0=$!
 
+nohup python -u Fed_MBPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 1 --eta 0.050 > ./outerr/Fed_MBPG_CartPole_0p8_gi250_a1_eta050_redo1.out 2> ./outerr/Fed_MBPG_CartPole_0p8_gi250_a1_eta050_redo1.err &
+pid0=$!
+nohup python -u Fed_HAPG.py --global-iteration 250 --env CartPole --beta 0.8 --num-agent 1 --eta 0.050 > ./outerr/Fed_HAPG_CartPole_0p8_gi250_a1_eta050_redo1.out 2> ./outerr/Fed_HAPG_CartPole_0p8_gi250_a1_eta050_redo1.err &
+pid0=$!
+
 # # 休息30mins
 sleep 20
 
